@@ -1,0 +1,72 @@
+//
+//  AlxNativeAd.swift
+//  AlxAds
+//
+//  Created by liu weile on 2025/5/6.
+//
+
+import Foundation
+
+/**
+ 原生广告
+ */
+@objc public class AlxNativeAd:NSObject,AlxAdDelegate {
+    
+    @objc public static let Create_Type_Unknown = 0; //未知类型
+    @objc public static let Create_Type_Large_Image = 1; //大图
+    @objc public static let Create_Type_Small_Image = 2; //小图
+    @objc public static let Create_Type_Group_Image = 3; //组图
+    @objc public static let Create_Type_Video = 4; //视频
+    
+    internal var nativeAdAction:AlxNativeAdAction?=nil
+    
+    public override init() {
+        super.init()
+    }
+    
+//   广告素材类型【如：1:大图、2:小图、3:组图、4:视频、0:未知类型】
+    @objc public internal(set) var createType:Int = 0
+
+//   广告来源
+    @objc public internal(set) var adSource:String?
+    
+    @objc public internal(set) var title:String?
+    
+    @objc public internal(set) var desc:String?
+    
+    @objc public internal(set) var icon:AlxNativeAdmage?
+    
+//   广告内容多图素材
+    @objc public internal(set) var images:[AlxNativeAdmage]?
+    
+//   广告行为按钮的显示文字（例如："查看详情"或"下载"）
+    @objc public internal(set) var callToAction:String?
+    
+//   广告多媒体内容信息
+    @objc public internal(set) var mediaContent:AlxMediaContent?
+    
+    @objc public internal(set) weak var rootViewController:UIViewController?
+    
+    @objc public weak var delegate:(any AlxNativeAdDelegate)?
+    
+//  Algorix logo
+//    @objc public internal(set) var adLogo:UIImage?
+    @objc public var adLogo:UIImage?{
+        get {
+            return nativeAdAction?.getAdLogo()
+        }
+    }
+    
+    @objc public func getPrice() -> Double{
+        return nativeAdAction?.getPrice() ?? 0
+    }
+    
+    @objc public func reportBiddingUrl(){
+        nativeAdAction?.reportBiddingUrl()
+    }
+    
+    @objc public func reportChargingUrl(){
+        nativeAdAction?.reportChargingUrl()
+    }
+    
+}

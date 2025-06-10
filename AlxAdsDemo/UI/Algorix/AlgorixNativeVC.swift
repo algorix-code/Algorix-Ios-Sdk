@@ -1,0 +1,279 @@
+//
+//  AlgorixNativeVC.swift
+//  AlxDemo
+//
+//  Created by liu weile on 2025/3/31.
+//
+
+import UIKit
+import AlxAds
+
+class AlgorixNativeVC: BaseUIViewController {
+    //AlxNativeAd.getCreativeType() 得到的广告素材类型【如：大图、小图、组图、视频、其他：未知类型】
+    public static let NATIVE_AD_CREATE_TYPE_UNKNOWN = 0; //未知类型
+    public static let NATIVE_AD_CREATE_TYPE_LARGE_IMAGE = 1; //大图
+    public static let NATIVE_AD_CREATE_TYPE_SMALL_IMAGE = 2; //小图
+    public static let NATIVE_AD_CREATE_TYPE_GROUP_IMAGE = 3; //组图
+    public static let NATIVE_AD_CREATE_TYPE_VIDEO = 4; //视频
+    
+    private var label:UILabel!
+    
+    private var isLoading:Bool=false
+    private var adContainer:UIView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        navigationItem.title=NSLocalizedString("native_ad", comment: "")
+        
+        let vStack=UIStackView()
+        vStack.translatesAutoresizingMaskIntoConstraints=false
+        view.addSubview(vStack)
+        vStack.axis = .vertical
+        vStack.spacing = 20
+        
+        let bnLoad=createButton(title: NSLocalizedString("load_ad", comment: ""),  action: #selector(loadAd))
+        vStack.addArrangedSubview(bnLoad)
+        
+        label=createLabel()
+        vStack.addArrangedSubview(label)
+        
+        adContainer=UIView()
+        adContainer.translatesAutoresizingMaskIntoConstraints=false
+        vStack.addArrangedSubview(adContainer)
+//        adContainer.backgroundColor = .red
+        
+        NSLayoutConstraint.activate([
+            vStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            vStack.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor),
+            vStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            vStack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            
+            
+            bnLoad.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            bnLoad.heightAnchor.constraint(equalToConstant: 50),
+            
+            label.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            label.heightAnchor.constraint(equalToConstant: 50),
+            
+            adContainer.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+        ])
+        
+    }
+    
+    @objc func loadAd(){
+        print("load ad")
+        if isLoading {
+            return
+        }
+
+        isLoading=true
+        label.text=NSLocalizedString("loading", comment: "")
+
+        let loader=AlxNativeAdLoader(adUnitID: AdConfig.Alx_Native_Ad_Id,rootViewController: self)
+        loader.delegate = self
+        loader.loadAd()
+    }
+    
+    func showNativeAd(nativeAd:AlxNativeAd){
+        createTemplateView(nativeAd: nativeAd)
+    }
+    
+    private func createTemplateView(nativeAd:AlxNativeAd){
+        let rootView=AlxNativeAdView()
+        rootView.translatesAutoresizingMaskIntoConstraints=false
+        
+        let topRootView=UIView()
+        topRootView.translatesAutoresizingMaskIntoConstraints=false
+        rootView.addSubview(topRootView)
+        
+        let iconView=UIImageView()
+        iconView.translatesAutoresizingMaskIntoConstraints=false
+        topRootView.addSubview(iconView)
+        
+        let titleView=createLabel()
+        topRootView.addSubview(titleView)
+        titleView.textAlignment = .left
+        
+        let mediaView=AlxMediaView()
+        mediaView.translatesAutoresizingMaskIntoConstraints=false
+        rootView.addSubview(mediaView)
+        
+        let descView=createLabel()
+        rootView.addSubview(descView)
+        descView.textAlignment = .left
+        
+        let bottomRootView=UIView()
+        bottomRootView.translatesAutoresizingMaskIntoConstraints = false
+        rootView.addSubview(bottomRootView)
+        
+        let adFlagContainer = UIStackView()
+        adFlagContainer.translatesAutoresizingMaskIntoConstraints=false
+        bottomRootView.addSubview(adFlagContainer)
+        adFlagContainer.axis = .horizontal
+        adFlagContainer.backgroundColor = UIColor(red: 169/255, green: 166/255, blue: 166/255, alpha: 71/100)
+        adFlagContainer.spacing = 4
+        adFlagContainer.isLayoutMarginsRelativeArrangement = true
+        adFlagContainer.layoutMargins = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2)
+        
+        let adTagView=createLabel()
+//        adTagView.backgroundColor = .gray
+        adTagView.textColor = .white
+        adTagView.font = .systemFont(ofSize: 14)
+        adFlagContainer.addArrangedSubview(adTagView)
+        
+        let adLogoView=UIImageView()
+        adLogoView.translatesAutoresizingMaskIntoConstraints=false
+        adFlagContainer.addArrangedSubview(adLogoView)
+                
+        let adSourceView=createLabel()
+        bottomRootView.addSubview(adSourceView)
+        
+        let callToActionView=createLabel()
+        bottomRootView.addSubview(callToActionView)
+        callToActionView.backgroundColor = UIColor(red: 33/255, green: 78/255, blue: 243/255, alpha: 1)
+        callToActionView.layer.cornerRadius = 10
+        callToActionView.textColor = .white
+        callToActionView.textAlignment = .center
+        
+        let closeView=UIImageView(image: UIImage(named: "ic_close"))
+        closeView.translatesAutoresizingMaskIntoConstraints = false
+        bottomRootView.addSubview(closeView)
+        
+        rootView.titleView=titleView
+        rootView.descriptionView=descView
+        rootView.iconView=iconView
+        rootView.mediaView=mediaView
+        rootView.callToActionView=callToActionView
+        rootView.adSourceView=adSourceView
+        rootView.closeView=closeView
+        
+        clearSubView(adContainer)
+        adContainer.addSubview(rootView)
+        
+        NSLayoutConstraint.activate([
+            rootView.leftAnchor.constraint(equalTo: adContainer.leftAnchor),
+            rootView.rightAnchor.constraint(equalTo: adContainer.rightAnchor),
+            rootView.topAnchor.constraint(equalTo: adContainer.topAnchor),
+            rootView.bottomAnchor.constraint(equalTo: adContainer.bottomAnchor),
+            
+            topRootView.leftAnchor.constraint(equalTo: rootView.leftAnchor),
+            topRootView.rightAnchor.constraint(equalTo: rootView.rightAnchor),
+            topRootView.topAnchor.constraint(equalTo: rootView.topAnchor),
+            topRootView.heightAnchor.constraint(equalToConstant: 50),
+            
+            iconView.leftAnchor.constraint(equalTo: topRootView.leftAnchor),
+            iconView.widthAnchor.constraint(equalToConstant: 50),
+            iconView.heightAnchor.constraint(equalToConstant: 50),
+            
+            titleView.leftAnchor.constraint(equalTo: iconView.rightAnchor, constant: 10),
+            titleView.rightAnchor.constraint(equalTo: topRootView.rightAnchor),
+            titleView.centerYAnchor.constraint(equalTo: iconView.centerYAnchor),
+            
+//            mediaView.leftAnchor.constraint(equalTo: rootView.leftAnchor),
+//            mediaView.rightAnchor.constraint(equalTo: rootView.rightAnchor),
+            mediaView.topAnchor.constraint(equalTo: topRootView.bottomAnchor,constant: 10),
+            mediaView.widthAnchor.constraint(equalTo: rootView.widthAnchor),
+            mediaView.heightAnchor.constraint(equalToConstant: 200),
+            
+            descView.leftAnchor.constraint(equalTo: rootView.leftAnchor),
+            descView.rightAnchor.constraint(equalTo: rootView.rightAnchor),
+            descView.topAnchor.constraint(equalTo: mediaView.bottomAnchor, constant: 10),
+            
+            bottomRootView.leftAnchor.constraint(equalTo: rootView.leftAnchor),
+            bottomRootView.rightAnchor.constraint(equalTo: rootView.rightAnchor),
+            bottomRootView.topAnchor.constraint(equalTo: descView.bottomAnchor),
+            bottomRootView.heightAnchor.constraint(equalToConstant: 50),
+            
+            adFlagContainer.leadingAnchor.constraint(equalTo: bottomRootView.leadingAnchor,constant: 5),
+            adFlagContainer.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
+            
+//            adTagView.leftAnchor.constraint(equalTo: bottomRootView.leftAnchor),
+//            adTagView.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
+//            adTagView.widthAnchor.constraint(equalToConstant: 20),
+//            adTagView.heightAnchor.constraint(equalToConstant: 20),
+                       
+            adLogoView.widthAnchor.constraint(equalToConstant: 10),
+            adLogoView.heightAnchor.constraint(equalToConstant: 10),
+            
+            adSourceView.leadingAnchor.constraint(equalTo: adFlagContainer.trailingAnchor,constant: 10),
+            adSourceView.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
+//            adSourceView.widthAnchor.constraint(equalToConstant: 30),
+            adSourceView.heightAnchor.constraint(equalToConstant: 20),
+            
+            closeView.rightAnchor.constraint(equalTo: bottomRootView.rightAnchor),
+            closeView.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
+            closeView.widthAnchor.constraint(equalToConstant: 20),
+            closeView.heightAnchor.constraint(equalToConstant: 20),
+            
+            callToActionView.rightAnchor.constraint(equalTo: closeView.leftAnchor,constant: -10),
+            callToActionView.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
+            callToActionView.widthAnchor.constraint(equalToConstant: 70),
+            callToActionView.heightAnchor.constraint(equalToConstant: 30),
+        ])
+        
+        adTagView.text = "AD"
+        adLogoView.image = nativeAd.adLogo
+        titleView.text = nativeAd.title
+        descView.text = nativeAd.desc
+        adSourceView.text = nativeAd.adSource
+        callToActionView.text = nativeAd.callToAction
+        
+        if let url=nativeAd.icon?.url {
+            iconView.loadUrl(url)
+        }
+        
+        mediaView.setMediaContent(nativeAd.mediaContent)
+        
+        nativeAd.delegate = self
+        rootView.nativeAd = nativeAd
+    }
+    
+    private func closeAd(){
+        clearSubView(adContainer)
+    }
+
+}
+
+extension AlgorixNativeVC:AlxNativeAdLoaderDelegate{
+    func nativeAdLoaded(didReceive ads: [AlxNativeAd]) {
+        NSLog("nativeAdLoaded")
+        self.isLoading=false
+        self.label.text=NSLocalizedString("load_success", comment: "")
+        
+        if let ad = ads.first {
+            NSLog("nativeAdLoaded price: \(ad.getPrice())")
+            ad.reportBiddingUrl()
+            ad.reportChargingUrl()
+            
+            showNativeAd(nativeAd: ad)
+        }
+        
+    }
+    
+    func nativeAdFailToLoad(didFailWithError error: Error) {
+        let error1=error as NSError
+        let msg="\(error1.code): \(error1.localizedDescription)"
+        NSLog("nativeAdFailedToLoad: \(msg)")
+        
+        self.isLoading=false
+        self.label.text=String(format: NSLocalizedString("load_failed", comment: ""), msg)
+    }
+    
+    
+}
+
+extension AlgorixNativeVC:AlxNativeAdDelegate{
+    func nativeAdImpression(_ nativeAd:AlxNativeAd){
+        NSLog("nativeAdImpression")
+    }
+    
+    func nativeAdClick(_ nativeAd:AlxNativeAd){
+        NSLog("nativeAdClick")
+    }
+    
+    func nativeAdClose(_ nativeAd:AlxNativeAd){
+        NSLog("nativeAdClose")
+        self.closeAd()
+    }
+}
