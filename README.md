@@ -1,15 +1,13 @@
-## pod项目初始化。
-pod install 
-pod install --repo-update
+# Algorix Mobile Ads SDK for iOS
 
-## 运行项目配置
-iOS 12.0 或更高版本
-Xcode 15 或更高版本
-Swift 5.0 或更高版本
+# 集成接入前提条件
+- 使用 Xcode 15.0 或更高版本
+- iOS 最低部署目标为 iOS 12.0 或更高版本
+- Swift 语言版本5.0 或更高版本
 
-ssh-keygen -t ed25519 -C "liuweile@algorix.co" -f ~/.ssh/github_deploy_key
+# 导入 Algorix SDK
+1: 将AlxAds.xcframework 包复制到项目的Application Modules/Frameworks文件夹下（如果没有，需手动创建）。
+2: 在xcode中，在TARGETS中选择项目并将AlxAds.xcframework库添加到Frameworks, Libraries, and Embedded Content中
 
-
-Host github.com-repo-0
-        Hostname github.com
-        IdentityFile=~/.ssh/repo-0_deploy_key
+# Support 
+The Algorix SDK supports banner, Reawrd video, Interstitial, Native. See the code in the demo for details     
