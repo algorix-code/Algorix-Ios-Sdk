@@ -1,13 +1,14 @@
 # Algorix Mobile Ads SDK for iOS
+With the AlgoriX SDK, you can quickly integrate with multiple platforms and safely scale your demand, thus maximizing your potential revenue. Meanwhile, its lightweight package ensures you continue delivering users with the best experience possible.
 
-# 集成接入前提条件
-- 使用 Xcode 15.0 或更高版本
-- iOS 最低部署目标为 iOS 12.0 或更高版本
-- Swift 语言版本5.0 或更高版本
+# Integrate access prerequisites
+- Use Xcode 15.0 or later
+- Minimum iOS deployment target is iOS 12.0 or later
+- Swift language version 5.0 or higher
 
-# 导入 Algorix SDK
-1: 将AlxAds.xcframework 包复制到项目的Application Modules/Frameworks文件夹下（如果没有，需手动创建）。
-2: 在xcode中，在TARGETS中选择项目并将AlxAds.xcframework库添加到Frameworks, Libraries, and Embedded Content中
+# Import the Algorix SDK
+1: Copy the AlxAds.xcframework package into the Application Modules/Frameworks folder of your project (if you don't have one, create one manually).
+2: In xcode, select the project in TARGETS and add the AlxAds.xcframework library to Frameworks, Libraries, and Embedded Content
 
 # Support 
 The Algorix SDK supports banner, Reawrd video, Interstitial, Native. See the code in the demo for details     
