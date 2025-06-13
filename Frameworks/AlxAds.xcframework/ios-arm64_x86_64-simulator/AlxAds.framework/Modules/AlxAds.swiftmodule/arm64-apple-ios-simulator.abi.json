@@ -10243,161 +10243,161 @@
       "value": "true"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxBaseBannerView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Banner\/AlxBaseBannerView.swift",
       "kind": "BooleanLiteral",
       "offset": 695,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxBaseBannerView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Banner\/AlxBaseBannerView.swift",
       "kind": "IntegerLiteral",
       "offset": 751,
       "length": 2,
-      "value": "20"
+      "value": "22"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxAdWebView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxAdWebView.swift",
       "kind": "StringLiteral",
       "offset": 434,
       "length": 43,
       "value": "\"AlxInternalWebViewAccessibilityIdentifier\""
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxAdWebView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxAdWebView.swift",
       "kind": "BooleanLiteral",
       "offset": 555,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 428,
       "length": 3,
       "value": "169"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 432,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 444,
       "length": 3,
       "value": "166"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 448,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 459,
       "length": 3,
       "value": "166"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 463,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "FloatLiteral",
       "offset": 475,
       "length": 4,
       "value": "0.71"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "BooleanLiteral",
       "offset": 516,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 555,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "StringLiteral",
       "offset": 620,
       "length": 13,
       "value": "\"alx_ad_logo\""
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "BooleanLiteral",
       "offset": 745,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "BooleanLiteral",
       "offset": 874,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1028,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "StringLiteral",
       "offset": 1071,
       "length": 9,
       "value": "\"alx_ads\""
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "StringLiteral",
       "offset": 1129,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1253,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1388,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1452,
       "length": 2,
       "value": "12"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/AlxLogoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/AlxLogoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1554,
       "length": 1,
@@ -10411,84 +10411,84 @@
       "value": "\"AlxNativeMediaImageView\""
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 188,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 242,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 297,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 350,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 419,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 479,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 535,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 589,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1148,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "IntegerLiteral",
       "offset": 1189,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1228,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Views\/Video\/AlxVideoView.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Widget\/Video\/AlxVideoView.swift",
       "kind": "BooleanLiteral",
       "offset": 1319,
       "length": 5,
@@ -11507,28 +11507,28 @@
       "kind": "IntegerLiteral",
       "offset": 7909,
       "length": 2,
-      "value": "-2"
+      "value": "-5"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Control\/AlxVideoVC.swift",
       "kind": "IntegerLiteral",
       "offset": 8011,
       "length": 1,
-      "value": "2"
+      "value": "5"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Control\/AlxVideoVC.swift",
       "kind": "IntegerLiteral",
       "offset": 8077,
       "length": 2,
-      "value": "25"
+      "value": "30"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Control\/AlxVideoVC.swift",
       "kind": "IntegerLiteral",
       "offset": 8145,
       "length": 2,
-      "value": "25"
+      "value": "30"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Control\/AlxVideoVC.swift",
@@ -11731,7 +11731,7 @@
       "kind": "StringLiteral",
       "offset": 158,
       "length": 7,
-      "value": "\"1.0.3\""
+      "value": "\"1.1.0\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Config\/AlxConst.swift",
@@ -12030,35 +12030,28 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/build\/xcodebuild\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AlxAds\/IntermediateBuildFilesPath\/AlxAds.build\/Release-iphonesimulator\/AlxAds.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 871,
-      "length": 10,
-      "value": "\"alx_back\""
-    },
-    {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/build\/xcodebuild\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AlxAds\/IntermediateBuildFilesPath\/AlxAds.build\/Release-iphonesimulator\/AlxAds.build\/DerivedSources\/GeneratedAssetSymbols.swift",
-      "kind": "StringLiteral",
-      "offset": 1008,
+      "offset": 873,
       "length": 11,
       "value": "\"alx_close\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/build\/xcodebuild\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AlxAds\/IntermediateBuildFilesPath\/AlxAds.build\/Release-iphonesimulator\/AlxAds.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1155,
+      "offset": 1020,
       "length": 16,
       "value": "\"alx_video_play\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/build\/xcodebuild\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AlxAds\/IntermediateBuildFilesPath\/AlxAds.build\/Release-iphonesimulator\/AlxAds.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1305,
+      "offset": 1170,
       "length": 15,
       "value": "\"alx_voice_off\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/build\/xcodebuild\/Build\/Intermediates.noindex\/ArchiveIntermediates\/AlxAds\/IntermediateBuildFilesPath\/AlxAds.build\/Release-iphonesimulator\/AlxAds.build\/DerivedSources\/GeneratedAssetSymbols.swift",
       "kind": "StringLiteral",
-      "offset": 1452,
+      "offset": 1317,
       "length": 14,
       "value": "\"alx_voice_on\""
     }
