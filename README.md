@@ -7,8 +7,8 @@ With the AlgoriX SDK, you can quickly integrate with multiple platforms and safe
 - Swift language version 5.0 or higher
 
 # Import the Algorix SDK
-1: Copy the AlxAds.xcframework package into the Application Modules/Frameworks folder of your project (if you don't have one, create one manually).
-2: In xcode, select the project in TARGETS and add the AlxAds.xcframework library to Frameworks, Libraries, and Embedded Content
+1. Copy the AlxAds.xcframework package into the Application Modules/Frameworks folder of your project (if you don't have one, create one manually).
+2. In xcode, select the project in TARGETS and add the AlxAds.xcframework library to Frameworks, Libraries, and Embedded Content
 
 # Support 
 The Algorix SDK supports banner, Reawrd video, Interstitial, Native. See the code in the demo for details     
