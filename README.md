@@ -2,7 +2,7 @@
 With the AlgoriX SDK, you can quickly integrate with multiple platforms and safely scale your demand, thus maximizing your potential revenue. Meanwhile, its lightweight package ensures you continue delivering users with the best experience possible.
 
 # Integrate access prerequisites
-- Use Xcode 15.0 or later
+- Use Xcode 15.4 or later
 - Minimum iOS deployment target is iOS 12.0 or later
 - Swift language version 5.0 or higher
 
