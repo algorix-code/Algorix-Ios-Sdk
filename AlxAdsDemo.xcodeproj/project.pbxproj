@@ -496,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlxAdsDemo/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Alxgorix advertising application case";
@@ -527,6 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlxAdsDemo/Info.plist;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Alxgorix advertising application case";
