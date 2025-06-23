@@ -98,8 +98,8 @@ import _SwiftConcurrencyShims
   }
   @objc weak public var rootViewController: UIKit.UIViewController?
   @objc weak public var delegate: (any AlxAds.AlxNativeAdDelegate)?
-  @objc public func registerView(container: UIKit.UIView?, clickableViews: [UIKit.UIView]?)
-  @objc public func registerView(container: UIKit.UIView?, clickableViews: [UIKit.UIView]?, closeView: UIKit.UIView?)
+  @objc public func registerView(container: UIKit.UIView, clickableViews: [UIKit.UIView]?)
+  @objc public func registerView(container: UIKit.UIView, clickableViews: [UIKit.UIView]?, closeView: UIKit.UIView?)
   @objc public func unregisterView()
   @objc public var adLogo: UIKit.UIImage? {
     @objc get

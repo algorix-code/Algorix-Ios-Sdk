@@ -49,11 +49,11 @@ import Foundation
     
     @objc public weak var delegate:(any AlxNativeAdDelegate)?
     
-    @objc public func registerView(container:UIView?,clickableViews:[UIView]?){
+    @objc public func registerView(container:UIView,clickableViews:[UIView]?){
         self.registerView(container: container, clickableViews: clickableViews, closeView: nil)
     }
     
-    @objc public func registerView(container:UIView?,clickableViews:[UIView]?,closeView:UIView?){
+    @objc public func registerView(container:UIView,clickableViews:[UIView]?,closeView:UIView?){
         
     }
     

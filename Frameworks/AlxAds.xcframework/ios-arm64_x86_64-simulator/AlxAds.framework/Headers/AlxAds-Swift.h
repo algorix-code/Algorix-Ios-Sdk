@@ -479,8 +479,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Create_Typ
 @property (nonatomic, readonly, strong) AlxMediaContent * _Nullable mediaContent;
 @property (nonatomic, weak) UIViewController * _Nullable rootViewController;
 @property (nonatomic, weak) id <AlxNativeAdDelegate> _Nullable delegate;
-- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
-- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews closeView:(UIView * _Nullable)closeView;
+- (void)registerViewWithContainer:(UIView * _Nonnull)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
+- (void)registerViewWithContainer:(UIView * _Nonnull)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews closeView:(UIView * _Nullable)closeView;
 - (void)unregisterView;
 @property (nonatomic, readonly, strong) UIImage * _Nullable adLogo;
 - (double)getPrice SWIFT_WARN_UNUSED_RESULT;
@@ -1054,8 +1054,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Create_Typ
 @property (nonatomic, readonly, strong) AlxMediaContent * _Nullable mediaContent;
 @property (nonatomic, weak) UIViewController * _Nullable rootViewController;
 @property (nonatomic, weak) id <AlxNativeAdDelegate> _Nullable delegate;
-- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
-- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews closeView:(UIView * _Nullable)closeView;
+- (void)registerViewWithContainer:(UIView * _Nonnull)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
+- (void)registerViewWithContainer:(UIView * _Nonnull)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews closeView:(UIView * _Nullable)closeView;
 - (void)unregisterView;
 @property (nonatomic, readonly, strong) UIImage * _Nullable adLogo;
 - (double)getPrice SWIFT_WARN_UNUSED_RESULT;

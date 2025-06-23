@@ -3778,17 +3778,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
               },
               {
                 "kind": "TypeNominal",
@@ -3815,7 +3807,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)registerViewWithContainer:clickableViews:",
-            "mangledName": "$s6AlxAds0A8NativeAdC12registerView9container14clickableViewsySo6UIViewCSg_SayAHGSgtF",
+            "mangledName": "$s6AlxAds0A8NativeAdC12registerView9container14clickableViewsySo6UIViewC_SayAHGSgtF",
             "moduleName": "AlxAds",
             "objc_name": "registerViewWithContainer:clickableViews:",
             "declAttributes": [
@@ -3836,17 +3828,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "UIView",
+                "printedName": "UIKit.UIView",
+                "usr": "c:objc(cs)UIView"
               },
               {
                 "kind": "TypeNominal",
@@ -3887,7 +3871,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)registerViewWithContainer:clickableViews:closeView:",
-            "mangledName": "$s6AlxAds0A8NativeAdC12registerView9container14clickableViews05closeF0ySo6UIViewCSg_SayAIGSgAJtF",
+            "mangledName": "$s6AlxAds0A8NativeAdC12registerView9container14clickableViews05closeF0ySo6UIViewC_SayAIGSgAISgtF",
             "moduleName": "AlxAds",
             "objc_name": "registerViewWithContainer:clickableViews:closeView:",
             "declAttributes": [
@@ -8983,14 +8967,14 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/NativeAd\/AlxNativeAdImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 4195,
+      "offset": 4045,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/NativeAd\/AlxNativeAdImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 8997,
+      "offset": 8847,
       "length": 5,
       "value": "false"
     },
