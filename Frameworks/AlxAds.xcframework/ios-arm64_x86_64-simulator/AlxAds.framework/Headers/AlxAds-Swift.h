@@ -453,7 +453,7 @@ SWIFT_CLASS("_TtC6AlxAds12AlxMediaView")
 - (UIView * _Nullable)getAdMediaView SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class AlxNativeAdmage;
+@class AlxNativeAdImage;
 @protocol AlxNativeAdDelegate;
 /// 原生广告
 SWIFT_CLASS("_TtC6AlxAds11AlxNativeAd")
@@ -473,12 +473,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Create_Typ
 @property (nonatomic, readonly, copy) NSString * _Nullable adSource;
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
 @property (nonatomic, readonly, copy) NSString * _Nullable desc;
-@property (nonatomic, readonly, strong) AlxNativeAdmage * _Nullable icon;
-@property (nonatomic, readonly, copy) NSArray<AlxNativeAdmage *> * _Nullable images;
+@property (nonatomic, readonly, strong) AlxNativeAdImage * _Nullable icon;
+@property (nonatomic, readonly, copy) NSArray<AlxNativeAdImage *> * _Nullable images;
 @property (nonatomic, readonly, copy) NSString * _Nullable callToAction;
 @property (nonatomic, readonly, strong) AlxMediaContent * _Nullable mediaContent;
-@property (nonatomic, readonly, weak) UIViewController * _Nullable rootViewController;
+@property (nonatomic, weak) UIViewController * _Nullable rootViewController;
 @property (nonatomic, weak) id <AlxNativeAdDelegate> _Nullable delegate;
+- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
+- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews closeView:(UIView * _Nullable)closeView;
+- (void)unregisterView;
 @property (nonatomic, readonly, strong) UIImage * _Nullable adLogo;
 - (double)getPrice SWIFT_WARN_UNUSED_RESULT;
 - (void)reportBiddingUrl;
@@ -493,13 +496,21 @@ SWIFT_PROTOCOL("_TtP6AlxAds19AlxNativeAdDelegate_")
 - (void)nativeAdClose:(AlxNativeAd * _Nonnull)nativeAd;
 @end
 
+SWIFT_CLASS("_TtC6AlxAds16AlxNativeAdImage")
+@interface AlxNativeAdImage : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nullable url;
+@property (nonatomic, readonly) NSInteger width;
+@property (nonatomic, readonly) NSInteger height;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol AlxNativeAdLoaderDelegate;
 SWIFT_CLASS("_TtC6AlxAds17AlxNativeAdLoader")
 @interface AlxNativeAdLoader : NSObject
 @property (nonatomic, weak) id <AlxNativeAdLoaderDelegate> _Nullable delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (nonnull instancetype)initWithAdUnitID:(NSString * _Nonnull)adUnitID rootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAdUnitID:(NSString * _Nonnull)adUnitID OBJC_DESIGNATED_INITIALIZER;
 - (void)loadAd;
 @end
 
@@ -507,36 +518,6 @@ SWIFT_PROTOCOL("_TtP6AlxAds25AlxNativeAdLoaderDelegate_")
 @protocol AlxNativeAdLoaderDelegate <NSObject>
 - (void)nativeAdLoadedWithDidReceive:(NSArray<AlxNativeAd *> * _Nonnull)ads;
 - (void)nativeAdFailToLoadWithDidFailWithError:(NSError * _Nonnull)error;
-@end
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC6AlxAds15AlxNativeAdView")
-@interface AlxNativeAdView : AlxBaseNativeAdView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable titleView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable descriptionView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable callToActionView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable iconView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable imageView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable priceView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable adSourceView;
-@property (nonatomic, strong) IBOutlet AlxMediaView * _Nullable mediaView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable closeView;
-/// 将View添加到点击事件中，关闭按钮就不在此添加
-/// @param key
-/// @param value
-- (void)addAdViewWithKey:(NSString * _Nonnull)key view:(UIView * _Nonnull)view;
-@property (nonatomic, strong) AlxNativeAd * _Nullable nativeAd;
-- (void)destroy;
-@end
-
-SWIFT_CLASS("_TtC6AlxAds15AlxNativeAdmage")
-@interface AlxNativeAdmage : NSObject
-@property (nonatomic, readonly, copy) NSString * _Nullable url;
-@property (nonatomic, readonly) NSInteger width;
-@property (nonatomic, readonly) NSInteger height;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @protocol AlxRewardVideoAdDelegate;
@@ -1047,7 +1028,7 @@ SWIFT_CLASS("_TtC6AlxAds12AlxMediaView")
 - (UIView * _Nullable)getAdMediaView SWIFT_WARN_UNUSED_RESULT;
 @end
 
-@class AlxNativeAdmage;
+@class AlxNativeAdImage;
 @protocol AlxNativeAdDelegate;
 /// 原生广告
 SWIFT_CLASS("_TtC6AlxAds11AlxNativeAd")
@@ -1067,12 +1048,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Create_Typ
 @property (nonatomic, readonly, copy) NSString * _Nullable adSource;
 @property (nonatomic, readonly, copy) NSString * _Nullable title;
 @property (nonatomic, readonly, copy) NSString * _Nullable desc;
-@property (nonatomic, readonly, strong) AlxNativeAdmage * _Nullable icon;
-@property (nonatomic, readonly, copy) NSArray<AlxNativeAdmage *> * _Nullable images;
+@property (nonatomic, readonly, strong) AlxNativeAdImage * _Nullable icon;
+@property (nonatomic, readonly, copy) NSArray<AlxNativeAdImage *> * _Nullable images;
 @property (nonatomic, readonly, copy) NSString * _Nullable callToAction;
 @property (nonatomic, readonly, strong) AlxMediaContent * _Nullable mediaContent;
-@property (nonatomic, readonly, weak) UIViewController * _Nullable rootViewController;
+@property (nonatomic, weak) UIViewController * _Nullable rootViewController;
 @property (nonatomic, weak) id <AlxNativeAdDelegate> _Nullable delegate;
+- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews;
+- (void)registerViewWithContainer:(UIView * _Nullable)container clickableViews:(NSArray<UIView *> * _Nullable)clickableViews closeView:(UIView * _Nullable)closeView;
+- (void)unregisterView;
 @property (nonatomic, readonly, strong) UIImage * _Nullable adLogo;
 - (double)getPrice SWIFT_WARN_UNUSED_RESULT;
 - (void)reportBiddingUrl;
@@ -1087,13 +1071,21 @@ SWIFT_PROTOCOL("_TtP6AlxAds19AlxNativeAdDelegate_")
 - (void)nativeAdClose:(AlxNativeAd * _Nonnull)nativeAd;
 @end
 
+SWIFT_CLASS("_TtC6AlxAds16AlxNativeAdImage")
+@interface AlxNativeAdImage : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nullable url;
+@property (nonatomic, readonly) NSInteger width;
+@property (nonatomic, readonly) NSInteger height;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @protocol AlxNativeAdLoaderDelegate;
 SWIFT_CLASS("_TtC6AlxAds17AlxNativeAdLoader")
 @interface AlxNativeAdLoader : NSObject
 @property (nonatomic, weak) id <AlxNativeAdLoaderDelegate> _Nullable delegate;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (nonnull instancetype)initWithAdUnitID:(NSString * _Nonnull)adUnitID rootViewController:(UIViewController * _Nonnull)rootViewController OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithAdUnitID:(NSString * _Nonnull)adUnitID OBJC_DESIGNATED_INITIALIZER;
 - (void)loadAd;
 @end
 
@@ -1101,36 +1093,6 @@ SWIFT_PROTOCOL("_TtP6AlxAds25AlxNativeAdLoaderDelegate_")
 @protocol AlxNativeAdLoaderDelegate <NSObject>
 - (void)nativeAdLoadedWithDidReceive:(NSArray<AlxNativeAd *> * _Nonnull)ads;
 - (void)nativeAdFailToLoadWithDidFailWithError:(NSError * _Nonnull)error;
-@end
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC6AlxAds15AlxNativeAdView")
-@interface AlxNativeAdView : AlxBaseNativeAdView
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable titleView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable descriptionView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable callToActionView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable iconView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable imageView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable priceView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable adSourceView;
-@property (nonatomic, strong) IBOutlet AlxMediaView * _Nullable mediaView;
-@property (nonatomic, strong) IBOutlet UIView * _Nullable closeView;
-/// 将View添加到点击事件中，关闭按钮就不在此添加
-/// @param key
-/// @param value
-- (void)addAdViewWithKey:(NSString * _Nonnull)key view:(UIView * _Nonnull)view;
-@property (nonatomic, strong) AlxNativeAd * _Nullable nativeAd;
-- (void)destroy;
-@end
-
-SWIFT_CLASS("_TtC6AlxAds15AlxNativeAdmage")
-@interface AlxNativeAdmage : NSObject
-@property (nonatomic, readonly, copy) NSString * _Nullable url;
-@property (nonatomic, readonly) NSInteger width;
-@property (nonatomic, readonly) NSInteger height;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @protocol AlxRewardVideoAdDelegate;

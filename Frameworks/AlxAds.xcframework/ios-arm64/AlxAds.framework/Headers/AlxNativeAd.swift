@@ -34,10 +34,10 @@ import Foundation
     
     @objc public internal(set) var desc:String?
     
-    @objc public internal(set) var icon:AlxNativeAdmage?
+    @objc public internal(set) var icon:AlxNativeAdImage?
     
 //   广告内容多图素材
-    @objc public internal(set) var images:[AlxNativeAdmage]?
+    @objc public internal(set) var images:[AlxNativeAdImage]?
     
 //   广告行为按钮的显示文字（例如："查看详情"或"下载"）
     @objc public internal(set) var callToAction:String?
@@ -45,9 +45,21 @@ import Foundation
 //   广告多媒体内容信息
     @objc public internal(set) var mediaContent:AlxMediaContent?
     
-    @objc public internal(set) weak var rootViewController:UIViewController?
+    @objc public weak var rootViewController:UIViewController?
     
     @objc public weak var delegate:(any AlxNativeAdDelegate)?
+    
+    @objc public func registerView(container:UIView?,clickableViews:[UIView]?){
+        self.registerView(container: container, clickableViews: clickableViews, closeView: nil)
+    }
+    
+    @objc public func registerView(container:UIView?,clickableViews:[UIView]?,closeView:UIView?){
+        
+    }
+    
+    @objc public func unregisterView(){
+        
+    }
     
 //  Algorix logo
 //    @objc public internal(set) var adLogo:UIImage?

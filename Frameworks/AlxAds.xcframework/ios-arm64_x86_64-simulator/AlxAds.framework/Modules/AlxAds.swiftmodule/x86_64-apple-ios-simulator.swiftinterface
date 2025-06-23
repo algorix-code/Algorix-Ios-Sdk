@@ -20,53 +20,6 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_inheritsConvenienceInitializers @IBDesignable @objc @_Concurrency.MainActor @preconcurrency public class AlxNativeAdView : AlxAds.AlxBaseNativeAdView {
-  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var titleView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var descriptionView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var callToActionView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var iconView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var imageView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var priceView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var adSourceView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var mediaView: AlxAds.AlxMediaView? {
-    @objc get
-    @objc set
-  }
-  @objc @IBOutlet @_Concurrency.MainActor @preconcurrency public var closeView: UIKit.UIView? {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor @preconcurrency public func addAdView(key: Swift.String, view: UIKit.UIView)
-  @objc @_Concurrency.MainActor @preconcurrency public var nativeAd: AlxAds.AlxNativeAd? {
-    @objc get
-    @objc set
-  }
-  @objc @_Concurrency.MainActor @preconcurrency override public func destroy()
-  @objc deinit
-}
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AlxBaseAdView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -131,10 +84,10 @@ import _SwiftConcurrencyShims
   @objc public var desc: Swift.String? {
     get
   }
-  @objc public var icon: AlxAds.AlxNativeAdmage? {
+  @objc public var icon: AlxAds.AlxNativeAdImage? {
     get
   }
-  @objc public var images: [AlxAds.AlxNativeAdmage]? {
+  @objc public var images: [AlxAds.AlxNativeAdImage]? {
     get
   }
   @objc public var callToAction: Swift.String? {
@@ -143,10 +96,11 @@ import _SwiftConcurrencyShims
   @objc public var mediaContent: AlxAds.AlxMediaContent? {
     get
   }
-  @objc weak public var rootViewController: UIKit.UIViewController? {
-    get
-  }
+  @objc weak public var rootViewController: UIKit.UIViewController?
   @objc weak public var delegate: (any AlxAds.AlxNativeAdDelegate)?
+  @objc public func registerView(container: UIKit.UIView?, clickableViews: [UIKit.UIView]?)
+  @objc public func registerView(container: UIKit.UIView?, clickableViews: [UIKit.UIView]?, closeView: UIKit.UIView?)
+  @objc public func unregisterView()
   @objc public var adLogo: UIKit.UIImage? {
     @objc get
   }
@@ -180,7 +134,7 @@ import _SwiftConcurrencyShims
   @_Concurrency.MainActor @preconcurrency @objc public func reportChargingUrl()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class AlxNativeAdmage : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class AlxNativeAdImage : ObjectiveC.NSObject {
   @objc public var url: Swift.String? {
     get
   }
@@ -304,7 +258,7 @@ import _SwiftConcurrencyShims
     @objc get
     @objc set
   }
-  @objc public init(adUnitID: Swift.String, rootViewController: UIKit.UIViewController)
+  @objc public init(adUnitID: Swift.String)
   @objc public func loadAd()
   @objc deinit
 }

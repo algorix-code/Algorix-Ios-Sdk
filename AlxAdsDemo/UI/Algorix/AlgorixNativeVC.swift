@@ -9,17 +9,14 @@ import UIKit
 import AlxAds
 
 class AlgorixNativeVC: BaseUIViewController {
-    //AlxNativeAd.getCreativeType() 得到的广告素材类型【如：大图、小图、组图、视频、其他：未知类型】
-    public static let NATIVE_AD_CREATE_TYPE_UNKNOWN = 0; //未知类型
-    public static let NATIVE_AD_CREATE_TYPE_LARGE_IMAGE = 1; //大图
-    public static let NATIVE_AD_CREATE_TYPE_SMALL_IMAGE = 2; //小图
-    public static let NATIVE_AD_CREATE_TYPE_GROUP_IMAGE = 3; //组图
-    public static let NATIVE_AD_CREATE_TYPE_VIDEO = 4; //视频
     
     private var label:UILabel!
     
     private var isLoading:Bool=false
     private var adContainer:UIView!
+    
+    //注意获取到的nativeAd对象需要全局属性设置。如果是func方法声明的nativeAd属性对象，func调用结束后nativeAd会被系统自动回收
+    private var nativeAd:AlxNativeAd?=nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,17 +67,23 @@ class AlgorixNativeVC: BaseUIViewController {
         isLoading=true
         label.text=NSLocalizedString("loading", comment: "")
 
-        let loader=AlxNativeAdLoader(adUnitID: AdConfig.Alx_Native_Ad_Id,rootViewController: self)
+        let loader=AlxNativeAdLoader(adUnitID: AdConfig.Alx_Native_Ad_Id)
         loader.delegate = self
         loader.loadAd()
     }
     
     func showNativeAd(nativeAd:AlxNativeAd){
-        createTemplateView(nativeAd: nativeAd)
+        self.nativeAd = nativeAd
+        createTemplateView()
     }
     
-    private func createTemplateView(nativeAd:AlxNativeAd){
-        let rootView=AlxNativeAdView()
+    
+    
+    private func createTemplateView(){
+        guard let nativeAd = self.nativeAd else{
+            return
+        }
+        let rootView=UIView()
         rootView.translatesAutoresizingMaskIntoConstraints=false
         
         let topRootView=UIView()
@@ -140,14 +143,6 @@ class AlgorixNativeVC: BaseUIViewController {
         closeView.translatesAutoresizingMaskIntoConstraints = false
         bottomRootView.addSubview(closeView)
         
-        rootView.titleView=titleView
-        rootView.descriptionView=descView
-        rootView.iconView=iconView
-        rootView.mediaView=mediaView
-        rootView.callToActionView=callToActionView
-        rootView.adSourceView=adSourceView
-        rootView.closeView=closeView
-        
         clearSubView(adContainer)
         adContainer.addSubview(rootView)
         
@@ -170,8 +165,6 @@ class AlgorixNativeVC: BaseUIViewController {
             titleView.rightAnchor.constraint(equalTo: topRootView.rightAnchor),
             titleView.centerYAnchor.constraint(equalTo: iconView.centerYAnchor),
             
-//            mediaView.leftAnchor.constraint(equalTo: rootView.leftAnchor),
-//            mediaView.rightAnchor.constraint(equalTo: rootView.rightAnchor),
             mediaView.topAnchor.constraint(equalTo: topRootView.bottomAnchor,constant: 10),
             mediaView.widthAnchor.constraint(equalTo: rootView.widthAnchor),
             mediaView.heightAnchor.constraint(equalToConstant: 200),
@@ -187,18 +180,12 @@ class AlgorixNativeVC: BaseUIViewController {
             
             adFlagContainer.leadingAnchor.constraint(equalTo: bottomRootView.leadingAnchor,constant: 5),
             adFlagContainer.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
-            
-//            adTagView.leftAnchor.constraint(equalTo: bottomRootView.leftAnchor),
-//            adTagView.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
-//            adTagView.widthAnchor.constraint(equalToConstant: 20),
-//            adTagView.heightAnchor.constraint(equalToConstant: 20),
                        
             adLogoView.widthAnchor.constraint(equalToConstant: 10),
             adLogoView.heightAnchor.constraint(equalToConstant: 10),
             
             adSourceView.leadingAnchor.constraint(equalTo: adFlagContainer.trailingAnchor,constant: 10),
             adSourceView.centerYAnchor.constraint(equalTo: bottomRootView.centerYAnchor),
-//            adSourceView.widthAnchor.constraint(equalToConstant: 30),
             adSourceView.heightAnchor.constraint(equalToConstant: 20),
             
             closeView.rightAnchor.constraint(equalTo: bottomRootView.rightAnchor),
@@ -222,15 +209,20 @@ class AlgorixNativeVC: BaseUIViewController {
         if let url=nativeAd.icon?.url {
             iconView.loadUrl(url)
         }
-        
         mediaView.setMediaContent(nativeAd.mediaContent)
         
         nativeAd.delegate = self
-        rootView.nativeAd = nativeAd
+        nativeAd.rootViewController = self
+        nativeAd.registerView(container: rootView, clickableViews: [titleView,iconView,mediaView,callToActionView],closeView: closeView)
     }
     
     private func closeAd(){
         clearSubView(adContainer)
+    }
+    
+    //销毁
+    deinit {
+        print("deinit")
     }
 
 }

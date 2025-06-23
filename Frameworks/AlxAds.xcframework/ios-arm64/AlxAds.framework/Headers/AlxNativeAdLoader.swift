@@ -25,9 +25,9 @@ import Foundation
         model = AlxNativeAdModel()
     }
     
-    @objc public init(adUnitID:String,rootViewController:UIViewController) {
+    @objc public init(adUnitID:String) {
         super.init()
-        model = AlxNativeAdModel(adUnitID: adUnitID,rootViewController: rootViewController)
+        model = AlxNativeAdModel(adUnitID: adUnitID)
     }
     
     @objc public func loadAd(){

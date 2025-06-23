@@ -76,1409 +76,6 @@
         ]
       },
       {
-        "kind": "TypeDecl",
-        "name": "AlxNativeAdView",
-        "printedName": "AlxNativeAdView",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(frame:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "AlxNativeAdView",
-                "printedName": "AlxAds.AlxNativeAdView",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)initWithFrame:",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC5frameACSo6CGRectV_tcfc",
-            "moduleName": "AlxAds",
-            "overriding": true,
-            "objc_name": "initWithFrame:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Preconcurrency",
-              "Custom",
-              "Override",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(coder:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AlxAds.AlxNativeAdView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AlxNativeAdView",
-                    "printedName": "AlxAds.AlxNativeAdView",
-                    "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "NSCoder",
-                "printedName": "Foundation.NSCoder",
-                "usr": "c:objc(cs)NSCoder"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)initWithCoder:",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC5coderACSgSo7NSCoderC_tcfc",
-            "moduleName": "AlxAds",
-            "overriding": true,
-            "objc_name": "initWithCoder:",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Preconcurrency",
-              "Custom",
-              "Required",
-              "AccessControl"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Var",
-            "name": "titleView",
-            "printedName": "titleView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)titleView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC05titleE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)titleView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05titleE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setTitleView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05titleE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC05titleE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05titleE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "descriptionView",
-            "printedName": "descriptionView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)descriptionView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC011descriptionE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)descriptionView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC011descriptionE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setDescriptionView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC011descriptionE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC011descriptionE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC011descriptionE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "callToActionView",
-            "printedName": "callToActionView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)callToActionView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC012callToActionE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)callToActionView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC012callToActionE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setCallToActionView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC012callToActionE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC012callToActionE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC012callToActionE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "iconView",
-            "printedName": "iconView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)iconView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC04iconE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)iconView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC04iconE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setIconView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC04iconE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC04iconE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC04iconE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "imageView",
-            "printedName": "imageView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)imageView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC05imageE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)imageView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05imageE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setImageView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05imageE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC05imageE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05imageE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "priceView",
-            "printedName": "priceView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)priceView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC05priceE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)priceView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05priceE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setPriceView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05priceE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC05priceE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05priceE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "adSourceView",
-            "printedName": "adSourceView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)adSourceView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC08adSourceE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)adSourceView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC08adSourceE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setAdSourceView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC08adSourceE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC08adSourceE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC08adSourceE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "mediaView",
-            "printedName": "mediaView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AlxAds.AlxMediaView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AlxMediaView",
-                    "printedName": "AlxAds.AlxMediaView",
-                    "usr": "c:@M@AlxAds@objc(cs)AlxMediaView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)mediaView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC05mediaE0AA0a5MediaE0CSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AlxAds.AlxMediaView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AlxMediaView",
-                        "printedName": "AlxAds.AlxMediaView",
-                        "usr": "c:@M@AlxAds@objc(cs)AlxMediaView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)mediaView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05mediaE0AA0a5MediaE0CSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AlxAds.AlxMediaView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AlxMediaView",
-                        "printedName": "AlxAds.AlxMediaView",
-                        "usr": "c:@M@AlxAds@objc(cs)AlxMediaView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setMediaView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05mediaE0AA0a5MediaE0CSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC05mediaE0AA0a5MediaE0CSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05mediaE0AA0a5MediaE0CSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "closeView",
-            "printedName": "closeView",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)closeView",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC05closeE0So6UIViewCSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "IBOutlet",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)closeView",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05closeE0So6UIViewCSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "UIKit.UIView?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "UIView",
-                        "printedName": "UIKit.UIView",
-                        "usr": "c:objc(cs)UIView"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setCloseView:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05closeE0So6UIViewCSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC05closeE0So6UIViewCSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC05closeE0So6UIViewCSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "addAdView",
-            "printedName": "addAdView(key:view:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIView",
-                "printedName": "UIKit.UIView",
-                "usr": "c:objc(cs)UIView"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)addAdViewWithKey:view:",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC03adddE03key4viewySS_So6UIViewCtF",
-            "moduleName": "AlxAds",
-            "objc_name": "addAdViewWithKey:view:",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Var",
-            "name": "nativeAd",
-            "printedName": "nativeAd",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AlxAds.AlxNativeAd?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AlxNativeAd",
-                    "printedName": "AlxAds.AlxNativeAd",
-                    "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(py)nativeAd",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC06nativeD0AA0acD0CSgvp",
-            "moduleName": "AlxAds",
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "AccessControl",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AlxAds.AlxNativeAd?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AlxNativeAd",
-                        "printedName": "AlxAds.AlxNativeAd",
-                        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)nativeAd",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC06nativeD0AA0acD0CSgvg",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AlxAds.AlxNativeAd?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AlxNativeAd",
-                        "printedName": "AlxAds.AlxNativeAd",
-                        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)setNativeAd:",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC06nativeD0AA0acD0CSgvs",
-                "moduleName": "AlxAds",
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6AlxAds0A12NativeAdViewC06nativeD0AA0acD0CSgvM",
-                "mangledName": "$s6AlxAds0A12NativeAdViewC06nativeD0AA0acD0CSgvM",
-                "moduleName": "AlxAds",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Function",
-            "name": "destroy",
-            "printedName": "destroy()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView(im)destroy",
-            "mangledName": "$s6AlxAds0A12NativeAdViewC7destroyyyF",
-            "moduleName": "AlxAds",
-            "overriding": true,
-            "declAttributes": [
-              "Preconcurrency",
-              "Custom",
-              "Override",
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdView",
-        "mangledName": "$s6AlxAds0A12NativeAdViewC",
-        "moduleName": "AlxAds",
-        "declAttributes": [
-          "Preconcurrency",
-          "Custom",
-          "AccessControl",
-          "ObjC",
-          "IBDesignable"
-        ],
-        "superclassUsr": "c:@M@AlxAds@objc(cs)AlxBaseNativeAdView",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "AlxAds.AlxBaseNativeAdView",
-          "AlxAds.AlxBaseAdView",
-          "UIKit.UIView",
-          "UIKit.UIResponder",
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "UITraitChangeObservable",
-            "printedName": "UITraitChangeObservable",
-            "usr": "s:5UIKit23UITraitChangeObservableP",
-            "mangledName": "$s5UIKit23UITraitChangeObservableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "__DefaultCustomPlaygroundQuickLookable",
-            "printedName": "__DefaultCustomPlaygroundQuickLookable",
-            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
-            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "AlxAds",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -3193,6 +1790,13 @@
             "printedName": "__DefaultCustomPlaygroundQuickLookable",
             "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
             "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -4671,13 +3275,13 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "AlxAds.AlxNativeAdmage?",
+                "printedName": "AlxAds.AlxNativeAdImage?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "AlxNativeAdmage",
-                    "printedName": "AlxAds.AlxNativeAdmage",
-                    "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage"
+                    "name": "AlxNativeAdImage",
+                    "printedName": "AlxAds.AlxNativeAdImage",
+                    "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage"
                   }
                 ],
                 "usr": "s:Sq"
@@ -4685,7 +3289,7 @@
             ],
             "declKind": "Var",
             "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(py)icon",
-            "mangledName": "$s6AlxAds0A8NativeAdC4iconAA0aC6AdmageCSgvp",
+            "mangledName": "$s6AlxAds0A8NativeAdC4iconAA0acD5ImageCSgvp",
             "moduleName": "AlxAds",
             "declAttributes": [
               "HasInitialValue",
@@ -4704,13 +3308,13 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "AlxAds.AlxNativeAdmage?",
+                    "printedName": "AlxAds.AlxNativeAdImage?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "AlxNativeAdmage",
-                        "printedName": "AlxAds.AlxNativeAdmage",
-                        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage"
+                        "name": "AlxNativeAdImage",
+                        "printedName": "AlxAds.AlxNativeAdImage",
+                        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage"
                       }
                     ],
                     "usr": "s:Sq"
@@ -4718,7 +3322,7 @@
                 ],
                 "declKind": "Accessor",
                 "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)icon",
-                "mangledName": "$s6AlxAds0A8NativeAdC4iconAA0aC6AdmageCSgvg",
+                "mangledName": "$s6AlxAds0A8NativeAdC4iconAA0acD5ImageCSgvg",
                 "moduleName": "AlxAds",
                 "implicit": true,
                 "declAttributes": [
@@ -4736,18 +3340,18 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "[AlxAds.AlxNativeAdmage]?",
+                "printedName": "[AlxAds.AlxNativeAdImage]?",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Array",
-                    "printedName": "[AlxAds.AlxNativeAdmage]",
+                    "printedName": "[AlxAds.AlxNativeAdImage]",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "AlxNativeAdmage",
-                        "printedName": "AlxAds.AlxNativeAdmage",
-                        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage"
+                        "name": "AlxNativeAdImage",
+                        "printedName": "AlxAds.AlxNativeAdImage",
+                        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage"
                       }
                     ],
                     "usr": "s:Sa"
@@ -4758,7 +3362,7 @@
             ],
             "declKind": "Var",
             "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(py)images",
-            "mangledName": "$s6AlxAds0A8NativeAdC6imagesSayAA0aC6AdmageCGSgvp",
+            "mangledName": "$s6AlxAds0A8NativeAdC6imagesSayAA0acD5ImageCGSgvp",
             "moduleName": "AlxAds",
             "declAttributes": [
               "HasInitialValue",
@@ -4778,18 +3382,18 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "[AlxAds.AlxNativeAdmage]?",
+                    "printedName": "[AlxAds.AlxNativeAdImage]?",
                     "children": [
                       {
                         "kind": "TypeNominal",
                         "name": "Array",
-                        "printedName": "[AlxAds.AlxNativeAdmage]",
+                        "printedName": "[AlxAds.AlxNativeAdImage]",
                         "children": [
                           {
                             "kind": "TypeNominal",
-                            "name": "AlxNativeAdmage",
-                            "printedName": "AlxAds.AlxNativeAdmage",
-                            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage"
+                            "name": "AlxNativeAdImage",
+                            "printedName": "AlxAds.AlxNativeAdImage",
+                            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage"
                           }
                         ],
                         "usr": "s:Sa"
@@ -4800,7 +3404,7 @@
                 ],
                 "declKind": "Accessor",
                 "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)images",
-                "mangledName": "$s6AlxAds0A8NativeAdC6imagesSayAA0aC6AdmageCGSgvg",
+                "mangledName": "$s6AlxAds0A8NativeAdC6imagesSayAA0acD5ImageCGSgvg",
                 "moduleName": "AlxAds",
                 "implicit": true,
                 "declAttributes": [
@@ -4961,7 +3565,6 @@
               "HasInitialValue",
               "HasStorage",
               "ReferenceOwnership",
-              "SetterAccess",
               "AccessControl",
               "ObjC"
             ],
@@ -4997,6 +3600,59 @@
                   "ObjC"
                 ],
                 "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)setRootViewController:",
+                "mangledName": "$s6AlxAds0A8NativeAdC18rootViewControllerSo06UIViewG0CSgvs",
+                "moduleName": "AlxAds",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6AlxAds0A8NativeAdC18rootViewControllerSo06UIViewG0CSgvM",
+                "mangledName": "$s6AlxAds0A8NativeAdC18rootViewControllerSo06UIViewG0CSgvM",
+                "moduleName": "AlxAds",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -5109,6 +3765,157 @@
                 "accessorKind": "_modify"
               }
             ]
+          },
+          {
+            "kind": "Function",
+            "name": "registerView",
+            "printedName": "registerView(container:clickableViews:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIView]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)registerViewWithContainer:clickableViews:",
+            "mangledName": "$s6AlxAds0A8NativeAdC12registerView9container14clickableViewsySo6UIViewCSg_SayAHGSgtF",
+            "moduleName": "AlxAds",
+            "objc_name": "registerViewWithContainer:clickableViews:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "registerView",
+            "printedName": "registerView(container:clickableViews:closeView:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIView]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIView]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIView",
+                        "printedName": "UIKit.UIView",
+                        "usr": "c:objc(cs)UIView"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)registerViewWithContainer:clickableViews:closeView:",
+            "mangledName": "$s6AlxAds0A8NativeAdC12registerView9container14clickableViews05closeF0ySo6UIViewCSg_SayAIGSgAJtF",
+            "moduleName": "AlxAds",
+            "objc_name": "registerViewWithContainer:clickableViews:closeView:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unregisterView",
+            "printedName": "unregisterView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAd(im)unregisterView",
+            "mangledName": "$s6AlxAds0A8NativeAdC14unregisterViewyyF",
+            "moduleName": "AlxAds",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Var",
@@ -6214,8 +5021,8 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "AlxNativeAdmage",
-        "printedName": "AlxNativeAdmage",
+        "name": "AlxNativeAdImage",
+        "printedName": "AlxNativeAdImage",
         "children": [
           {
             "kind": "Var",
@@ -6238,8 +5045,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(py)url",
-            "mangledName": "$s6AlxAds0A12NativeAdmageC3urlSSSgvp",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(py)url",
+            "mangledName": "$s6AlxAds0A13NativeAdImageC3urlSSSgvp",
             "moduleName": "AlxAds",
             "declAttributes": [
               "HasInitialValue",
@@ -6271,8 +5078,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(im)url",
-                "mangledName": "$s6AlxAds0A12NativeAdmageC3urlSSSgvg",
+                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(im)url",
+                "mangledName": "$s6AlxAds0A13NativeAdImageC3urlSSSgvg",
                 "moduleName": "AlxAds",
                 "implicit": true,
                 "declAttributes": [
@@ -6295,8 +5102,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(py)width",
-            "mangledName": "$s6AlxAds0A12NativeAdmageC5widthSivp",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(py)width",
+            "mangledName": "$s6AlxAds0A13NativeAdImageC5widthSivp",
             "moduleName": "AlxAds",
             "declAttributes": [
               "HasInitialValue",
@@ -6320,8 +5127,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(im)width",
-                "mangledName": "$s6AlxAds0A12NativeAdmageC5widthSivg",
+                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(im)width",
+                "mangledName": "$s6AlxAds0A13NativeAdImageC5widthSivg",
                 "moduleName": "AlxAds",
                 "implicit": true,
                 "declAttributes": [
@@ -6344,8 +5151,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(py)height",
-            "mangledName": "$s6AlxAds0A12NativeAdmageC6heightSivp",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(py)height",
+            "mangledName": "$s6AlxAds0A13NativeAdImageC6heightSivp",
             "moduleName": "AlxAds",
             "declAttributes": [
               "HasInitialValue",
@@ -6369,8 +5176,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(im)height",
-                "mangledName": "$s6AlxAds0A12NativeAdmageC6heightSivg",
+                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(im)height",
+                "mangledName": "$s6AlxAds0A13NativeAdImageC6heightSivg",
                 "moduleName": "AlxAds",
                 "implicit": true,
                 "declAttributes": [
@@ -6387,14 +5194,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "AlxNativeAdmage",
-                "printedName": "AlxAds.AlxNativeAdmage",
-                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage"
+                "name": "AlxNativeAdImage",
+                "printedName": "AlxAds.AlxNativeAdImage",
+                "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage(im)init",
-            "mangledName": "$s6AlxAds0A12NativeAdmageCACycfc",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage(im)init",
+            "mangledName": "$s6AlxAds0A13NativeAdImageCACycfc",
             "moduleName": "AlxAds",
             "overriding": true,
             "implicit": true,
@@ -6408,8 +5215,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdmage",
-        "mangledName": "$s6AlxAds0A12NativeAdmageC",
+        "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdImage",
+        "mangledName": "$s6AlxAds0A13NativeAdImageC",
         "moduleName": "AlxAds",
         "declAttributes": [
           "AccessControl",
@@ -9845,7 +8652,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(adUnitID:rootViewController:)",
+            "printedName": "init(adUnitID:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -9858,19 +8665,13 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIViewController",
-                "printedName": "UIKit.UIViewController",
-                "usr": "c:objc(cs)UIViewController"
               }
             ],
             "declKind": "Constructor",
-            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdLoader(im)initWithAdUnitID:rootViewController:",
-            "mangledName": "$s6AlxAds0A14NativeAdLoaderC8adUnitID18rootViewControllerACSS_So06UIViewK0Ctcfc",
+            "usr": "c:@M@AlxAds@objc(cs)AlxNativeAdLoader(im)initWithAdUnitID:",
+            "mangledName": "$s6AlxAds0A14NativeAdLoaderC8adUnitIDACSS_tcfc",
             "moduleName": "AlxAds",
-            "objc_name": "initWithAdUnitID:rootViewController:",
+            "objc_name": "initWithAdUnitID:",
             "declAttributes": [
               "AccessControl",
               "ObjC"
@@ -10011,6 +8812,13 @@
     "json_format_version": 8
   },
   "ConstValues": [
+    {
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Base\/AlxBaseModel.swift",
+      "kind": "IntegerLiteral",
+      "offset": 382,
+      "length": 4,
+      "value": "-109"
+    },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Base\/AlxBaseAdView.swift",
       "kind": "BooleanLiteral",
@@ -10162,6 +8970,27 @@
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/AlxRewardVideoModel.swift",
       "kind": "BooleanLiteral",
       "offset": 333,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/NativeAd\/AlxNativeAdImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 470,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/NativeAd\/AlxNativeAdImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4195,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/NativeAd\/AlxNativeAdImpl.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8997,
       "length": 5,
       "value": "false"
     },
@@ -10609,14 +9438,14 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/AlxNativeAdModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 337,
+      "offset": 287,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Models\/AlxNativeAdModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 381,
+      "offset": 331,
       "length": 5,
       "value": "false"
     },
@@ -10707,21 +9536,7 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Data\/Vast\/AlxVideoVastBean.swift",
       "kind": "StringLiteral",
-      "offset": 237,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Data\/Vast\/AlxVideoVastBean.swift",
-      "kind": "StringLiteral",
-      "offset": 267,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Data\/Vast\/AlxVideoVastBean.swift",
-      "kind": "StringLiteral",
-      "offset": 502,
+      "offset": 506,
       "length": 2,
       "value": "\"\""
     },
@@ -11731,7 +10546,7 @@
       "kind": "StringLiteral",
       "offset": 158,
       "length": 7,
-      "value": "\"1.1.0\""
+      "value": "\"1.2.0\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Config\/AlxConst.swift",
@@ -11965,16 +10780,16 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Api\/NativeAd\/AlxNativeAdmage.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Api\/NativeAd\/AlxNativeAdImage.swift",
       "kind": "IntegerLiteral",
-      "offset": 253,
+      "offset": 254,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Api\/NativeAd\/AlxNativeAdmage.swift",
+      "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Api\/NativeAd\/AlxNativeAdImage.swift",
       "kind": "IntegerLiteral",
-      "offset": 306,
+      "offset": 307,
       "length": 1,
       "value": "0"
     },

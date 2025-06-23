@@ -7,7 +7,7 @@
 
 import Foundation
 
-@objc public class AlxNativeAdmage: NSObject {
+@objc public class AlxNativeAdImage: NSObject {
     
     @objc public internal(set) var url:String?
     
