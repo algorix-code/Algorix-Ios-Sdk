@@ -64,9 +64,7 @@ import Foundation
 //  Algorix logo
 //    @objc public internal(set) var adLogo:UIImage?
     @objc public var adLogo:UIImage?{
-        get {
-            return nativeAdAction?.getAdLogo()
-        }
+        get { nativeAdAction?.getAdLogo() }
     }
     
     @objc public func getPrice() -> Double{

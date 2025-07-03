@@ -30,79 +30,79 @@ class AlgorixBannerVC: BaseUIViewController{
         scrollView.translatesAutoresizingMaskIntoConstraints=false
         view.addSubview(scrollView)
         scrollView.isScrollEnabled=true
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 2100) //必须设置，否则不能滚动
-//        scrollView.contentSize = view.frame.size
         
-        
-        let vStack=UIStackView()
-        vStack.translatesAutoresizingMaskIntoConstraints=false
-        scrollView.addSubview(vStack)
-        vStack.axis = .vertical
-        vStack.spacing = 20
+        let contentView=UIStackView()
+        contentView.translatesAutoresizingMaskIntoConstraints=false
+        scrollView.addSubview(contentView)
+        contentView.axis = .vertical
+        contentView.spacing = 20
         
         
         let tip1=createLabel()
-        vStack.addArrangedSubview(tip1)
+        contentView.addArrangedSubview(tip1)
         tip1.text = NSLocalizedString("banner_ad_preload", comment: "")
         tip1.contentMode = .center
         
         let bnLoad=createButton(title: NSLocalizedString("load_ad", comment: ""),  action: #selector(preloadAd))
-        vStack.addArrangedSubview(bnLoad)
+        contentView.addArrangedSubview(bnLoad)
         
         let bnShow=createButton(title: NSLocalizedString("show_ad", comment: ""),  action: #selector(showAd))
-        vStack.addArrangedSubview(bnShow)
+        contentView.addArrangedSubview(bnShow)
         
         label=createLabel()
-        vStack.addArrangedSubview(label)
+        contentView.addArrangedSubview(label)
         
         adContainer=UIView()
         adContainer.translatesAutoresizingMaskIntoConstraints=false
-        vStack.addArrangedSubview(adContainer)
+        contentView.addArrangedSubview(adContainer)
         
         let tip2=createLabel()
-        vStack.addArrangedSubview(tip2)
+        contentView.addArrangedSubview(tip2)
         tip2.text = NSLocalizedString("banner_ad", comment: "")
         tip2.contentMode = .center
         
         let bnLoadAndShow=createButton(title: NSLocalizedString("load_and_show_ad", comment: ""),  action: #selector(loadAndShowAd))
-        vStack.addArrangedSubview(bnLoadAndShow)
+        contentView.addArrangedSubview(bnLoadAndShow)
         
         bannerView=AlxBannerAdView()
         bannerView.translatesAutoresizingMaskIntoConstraints=false
-        vStack.addArrangedSubview(bannerView)
+        contentView.addArrangedSubview(bannerView)
         
         for index in 1...30 {
             let test=createLabel()
-            vStack.addArrangedSubview(test)
+            contentView.addArrangedSubview(test)
             test.text = "\(index) Banner test title ad. use swift development"
         }
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.leftAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leftAnchor),
-            scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            scrollView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            vStack.topAnchor.constraint(equalTo: scrollView.topAnchor,constant: 20),
-            vStack.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor,constant: 20),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
                         
-            bnLoad.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            bnLoad.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnLoad.heightAnchor.constraint(equalToConstant: 50),
             
-            bnShow.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            bnShow.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnShow.heightAnchor.constraint(equalToConstant: 50),
             
-            label.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            label.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             label.heightAnchor.constraint(equalToConstant: 50),
             
-            bnLoadAndShow.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            bnLoadAndShow.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnLoadAndShow.heightAnchor.constraint(equalToConstant: 50),
             
-            adContainer.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            adContainer.widthAnchor.constraint(equalTo: contentView.widthAnchor),
 //            adContainer.heightAnchor.constraint(equalToConstant: 50),
             
-            bannerView.widthAnchor.constraint(equalTo: vStack.widthAnchor),
-//            bannerView.heightAnchor.constraint(equalToConstant: 100),        
+            bannerView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+//            bannerView.heightAnchor.constraint(equalToConstant: 100),
         ])
         
     }

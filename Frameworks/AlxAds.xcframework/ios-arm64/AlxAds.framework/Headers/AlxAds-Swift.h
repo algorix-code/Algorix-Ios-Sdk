@@ -559,10 +559,10 @@ SWIFT_CLASS("_TtC6AlxAds6AlxSdk")
 + (NSString * _Nonnull)getSDKVersion SWIFT_WARN_UNUSED_RESULT;
 + (void)addExtraParametersWithKey:(NSString * _Nonnull)key value:(id _Nonnull)value;
 + (NSDictionary<NSString *, id> * _Nonnull)getExtraParameters SWIFT_WARN_UNUSED_RESULT;
-+ (void)setSubjectToGDPR:(BOOL)value;
-+ (void)setUserConsent:(NSString * _Nonnull)value;
-+ (void)setBelowConsentAge:(BOOL)value;
-+ (void)subjectToUSPrivacy:(NSString * _Nonnull)value;
++ (void)setGDPRConsent:(BOOL)value;
++ (void)setGDPRConsentMessage:(NSString * _Nonnull)value;
++ (void)setCOPPAConsent:(BOOL)value;
++ (void)setCCPA:(NSString * _Nonnull)value;
 @end
 
 #endif

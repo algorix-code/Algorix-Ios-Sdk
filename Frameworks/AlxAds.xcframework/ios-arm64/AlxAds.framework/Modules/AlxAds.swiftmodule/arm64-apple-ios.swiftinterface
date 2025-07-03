@@ -242,10 +242,10 @@ import _SwiftConcurrencyShims
   @objc public static func getSDKVersion() -> Swift.String
   @objc public static func addExtraParameters(key: Swift.String, value: Any)
   @objc public static func getExtraParameters() -> [Swift.String : Any]
-  @objc public static func setSubjectToGDPR(_ value: Swift.Bool)
-  @objc public static func setUserConsent(_ value: Swift.String)
-  @objc public static func setBelowConsentAge(_ value: Swift.Bool)
-  @objc public static func subjectToUSPrivacy(_ value: Swift.String)
+  @objc public static func setGDPRConsent(_ value: Swift.Bool)
+  @objc public static func setGDPRConsentMessage(_ value: Swift.String)
+  @objc public static func setCOPPAConsent(_ value: Swift.Bool)
+  @objc public static func setCCPA(_ value: Swift.String)
   @objc deinit
 }
 @objc public protocol AlxNativeAdDelegate : ObjectiveC.NSObjectProtocol {

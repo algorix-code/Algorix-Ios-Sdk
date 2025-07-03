@@ -18,6 +18,12 @@
 		E31956512DF7DA6F0083BC3C /* AlgorixBannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31956412DF7DA6F0083BC3C /* AlgorixBannerVC.swift */; };
 		E31956522DF7DA6F0083BC3C /* AlgorixRewardVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31956462DF7DA6F0083BC3C /* AlgorixRewardVideoVC.swift */; };
 		E31956542DF7DA940083BC3C /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31956532DF7DA940083BC3C /* MainVC.swift */; };
+		E336DFEE2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFED2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift */; };
+		E336DFF52E16654200B237C0 /* MaxInterstitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFF12E16654200B237C0 /* MaxInterstitialVC.swift */; };
+		E336DFF62E16654200B237C0 /* MaxRewardVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFF42E16654200B237C0 /* MaxRewardVideoVC.swift */; };
+		E336DFF72E16654200B237C0 /* MaxMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFF22E16654200B237C0 /* MaxMainVC.swift */; };
+		E336DFF82E16654200B237C0 /* MaxBannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFF02E16654200B237C0 /* MaxBannerVC.swift */; };
+		E336DFF92E16654200B237C0 /* MaxNativeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFF32E16654200B237C0 /* MaxNativeVC.swift */; };
 		E33E7AC92DD4A0CB00C724B9 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E7AC82DD4A0CB00C724B9 /* BaseUIViewController.swift */; };
 		E33E7ACB2DD4A0E900C724B9 /* AdConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E7ACA2DD4A0E900C724B9 /* AdConfig.swift */; };
 		E33E7AEC2DD4AACF00C724B9 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E7AEB2DD4AACF00C724B9 /* UIImageView+Extensions.swift */; };
@@ -59,6 +65,12 @@
 		E31956472DF7DA6F0083BC3C /* AlgorixBannerXibVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixBannerXibVC.swift; sourceTree = "<group>"; };
 		E31956482DF7DA6F0083BC3C /* AlgorixBannerXibVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlgorixBannerXibVC.xib; sourceTree = "<group>"; };
 		E31956532DF7DA940083BC3C /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		E336DFED2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixMaxMediationAdapter.swift; sourceTree = "<group>"; };
+		E336DFF02E16654200B237C0 /* MaxBannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxBannerVC.swift; sourceTree = "<group>"; };
+		E336DFF12E16654200B237C0 /* MaxInterstitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxInterstitialVC.swift; sourceTree = "<group>"; };
+		E336DFF22E16654200B237C0 /* MaxMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxMainVC.swift; sourceTree = "<group>"; };
+		E336DFF32E16654200B237C0 /* MaxNativeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxNativeVC.swift; sourceTree = "<group>"; };
+		E336DFF42E16654200B237C0 /* MaxRewardVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxRewardVideoVC.swift; sourceTree = "<group>"; };
 		E33E7AC82DD4A0CB00C724B9 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		E33E7ACA2DD4A0E900C724B9 /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
 		E33E7AEB2DD4AACF00C724B9 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -115,6 +127,26 @@
 			path = Xib;
 			sourceTree = "<group>";
 		};
+		E336DFEC2E16625400B237C0 /* MaxAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				E336DFED2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift */,
+			);
+			path = MaxAdapter;
+			sourceTree = "<group>";
+		};
+		E336DFEF2E16652000B237C0 /* Max */ = {
+			isa = PBXGroup;
+			children = (
+				E336DFF02E16654200B237C0 /* MaxBannerVC.swift */,
+				E336DFF12E16654200B237C0 /* MaxInterstitialVC.swift */,
+				E336DFF22E16654200B237C0 /* MaxMainVC.swift */,
+				E336DFF32E16654200B237C0 /* MaxNativeVC.swift */,
+				E336DFF42E16654200B237C0 /* MaxRewardVideoVC.swift */,
+			);
+			path = Max;
+			sourceTree = "<group>";
+		};
 		E33E7AC22DD4A02A00C724B9 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +166,7 @@
 		E33E7AE22DD4AA4500C724B9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E336DFEF2E16652000B237C0 /* Max */,
 				E33E7AE92DD4AA8800C724B9 /* Algorix */,
 				E31956532DF7DA940083BC3C /* MainVC.swift */,
 			);
@@ -191,6 +224,7 @@
 		E3EC00612DD4933B00485DAF /* AlxAdsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E336DFEC2E16625400B237C0 /* MaxAdapter */,
 				E33E7AEA2DD4AAB600C724B9 /* Extensions */,
 				E33E7AE32DD4AA5C00C724B9 /* Assets */,
 				E33E7AE22DD4AA4500C724B9 /* UI */,
@@ -230,6 +264,7 @@
 				E3EC005C2DD4933B00485DAF /* Frameworks */,
 				E3EC005D2DD4933B00485DAF /* Resources */,
 				E3DE70632DF80C1000C5626A /* Embed Frameworks */,
+				ECBB5E4E1CDC36CDB657015F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -313,6 +348,27 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ECBB5E4E1CDC36CDB657015F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -323,12 +379,18 @@
 				E3EC00672DD4933B00485DAF /* ViewController.swift in Sources */,
 				E319564C2DF7DA6F0083BC3C /* AlgorixBannerXibVC.swift in Sources */,
 				E319564D2DF7DA6F0083BC3C /* AlgorixInterstitialVC.swift in Sources */,
+				E336DFEE2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift in Sources */,
 				E319564E2DF7DA6F0083BC3C /* AlgorixNativeVC.swift in Sources */,
 				E319564F2DF7DA6F0083BC3C /* AlgorixMainVC.swift in Sources */,
 				E31956502DF7DA6F0083BC3C /* AlgorixInterstitialBannerVC.swift in Sources */,
 				E31956512DF7DA6F0083BC3C /* AlgorixBannerVC.swift in Sources */,
 				E31956522DF7DA6F0083BC3C /* AlgorixRewardVideoVC.swift in Sources */,
 				E33E7AEC2DD4AACF00C724B9 /* UIImageView+Extensions.swift in Sources */,
+				E336DFF52E16654200B237C0 /* MaxInterstitialVC.swift in Sources */,
+				E336DFF62E16654200B237C0 /* MaxRewardVideoVC.swift in Sources */,
+				E336DFF72E16654200B237C0 /* MaxMainVC.swift in Sources */,
+				E336DFF82E16654200B237C0 /* MaxBannerVC.swift in Sources */,
+				E336DFF92E16654200B237C0 /* MaxNativeVC.swift in Sources */,
 				E33E7ACB2DD4A0E900C724B9 /* AdConfig.swift in Sources */,
 				E33E7AC92DD4A0CB00C724B9 /* BaseUIViewController.swift in Sources */,
 				E3EC00632DD4933B00485DAF /* AppDelegate.swift in Sources */,

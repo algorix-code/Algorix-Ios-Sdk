@@ -46,26 +46,24 @@ import Foundation
         return AlxSdkManager.getExtraParameters()
     }
     
-    /*
-        GDPR GDPR_Consent COPPA CCPA 设置
-     */
-    @objc public static func setSubjectToGDPR(_ value:Bool){
-        AlxSdkManager.setSubjectToGDPR(value)
+    // GDPR
+    @objc public static func setGDPRConsent(_ value:Bool){
+        AlxSdkManager.setGDPRConsent(value)
     }
     
-    // GDPR_Consent
-    @objc public static func setUserConsent(_ value:String){
-        AlxSdkManager.setUserConsent(value)
+    // GDPR Consent message
+    @objc public static func setGDPRConsentMessage(_ value:String){
+        AlxSdkManager.setGDPRConsentMessage(value)
     }
     
     // COPPA
-    @objc public static func setBelowConsentAge(_ value:Bool){
-        AlxSdkManager.setBelowConsentAge(value)
+    @objc public static func setCOPPAConsent(_ value:Bool){
+        AlxSdkManager.setCOPPAConsent(value)
     }
     
     // CCPA
-    @objc public static func subjectToUSPrivacy(_ value:String){
-        AlxSdkManager.subjectToUSPrivacy(value)
+    @objc public static func setCCPA(_ value:String){
+        AlxSdkManager.setCCPA(value)
     }
     
 }

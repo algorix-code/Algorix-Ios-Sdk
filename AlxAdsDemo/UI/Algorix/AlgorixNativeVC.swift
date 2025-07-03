@@ -23,37 +23,46 @@ class AlgorixNativeVC: BaseUIViewController {
         view.backgroundColor = .white
         navigationItem.title=NSLocalizedString("native_ad", comment: "")
         
-        let vStack=UIStackView()
-        vStack.translatesAutoresizingMaskIntoConstraints=false
-        view.addSubview(vStack)
-        vStack.axis = .vertical
-        vStack.spacing = 20
+        let scrollView=UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints=false
+        view.addSubview(scrollView)
+        scrollView.isScrollEnabled=true
+        
+        let contentView=UIStackView()
+        contentView.translatesAutoresizingMaskIntoConstraints=false
+        scrollView.addSubview(contentView)
+        contentView.axis = .vertical
+        contentView.spacing = 20
         
         let bnLoad=createButton(title: NSLocalizedString("load_ad", comment: ""),  action: #selector(loadAd))
-        vStack.addArrangedSubview(bnLoad)
+        contentView.addArrangedSubview(bnLoad)
         
         label=createLabel()
-        vStack.addArrangedSubview(label)
+        contentView.addArrangedSubview(label)
         
         adContainer=UIView()
         adContainer.translatesAutoresizingMaskIntoConstraints=false
-        vStack.addArrangedSubview(adContainer)
+        contentView.addArrangedSubview(adContainer)
 //        adContainer.backgroundColor = .red
         
         NSLayoutConstraint.activate([
-            vStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            vStack.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor),
-            vStack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            vStack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
+            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor,constant: 20),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
             
-            bnLoad.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            bnLoad.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnLoad.heightAnchor.constraint(equalToConstant: 50),
             
-            label.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            label.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             label.heightAnchor.constraint(equalToConstant: 50),
             
-            adContainer.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            adContainer.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            adContainer.heightAnchor.constraint(equalToConstant: 500),
         ])
         
     }
@@ -147,8 +156,8 @@ class AlgorixNativeVC: BaseUIViewController {
         adContainer.addSubview(rootView)
         
         NSLayoutConstraint.activate([
-            rootView.leftAnchor.constraint(equalTo: adContainer.leftAnchor),
-            rootView.rightAnchor.constraint(equalTo: adContainer.rightAnchor),
+            rootView.leadingAnchor.constraint(equalTo: adContainer.leadingAnchor),
+            rootView.trailingAnchor.constraint(equalTo: adContainer.trailingAnchor),
             rootView.topAnchor.constraint(equalTo: adContainer.topAnchor),
             rootView.bottomAnchor.constraint(equalTo: adContainer.bottomAnchor),
             

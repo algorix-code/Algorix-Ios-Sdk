@@ -7,6 +7,7 @@
 
 import UIKit
 import AlxAds
+import AppLovinSDK
 
 
 @main
@@ -16,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        initAds()
+        initAlgorix()
+        initMax()
         return true
     }
 
@@ -34,12 +36,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    private func initAds(){
+    private func initAlgorix(){
         AlxSdk.initializeSDK(token: AdConfig.Alx_Token, sid: AdConfig.Alx_Sid, appId: AdConfig.Alx_App_Id)
         AlxSdk.setDebug(true)
         //用户扩展参数
         AlxSdk.addExtraParameters(key:"uid2_token",value:"NewAdvertisingTokenIjb6u6KcMAt=")
     }
+    
+    private func initMax(){
+        let initConfig = ALSdkInitializationConfiguration(sdkKey: AdConfig.Max_App_Key) { builder in
+            builder.mediationProvider = ALMediationProviderMAX
+        }
+        
+        
+        ALPrivacySettings.setDoNotSell(false)
+        ALPrivacySettings.setHasUserConsent(true)
+
+          // Initialize the SDK with the configuration
+        ALSdk.shared().initialize(with: initConfig) { sdkConfig in
+        // Start loading ads
+        }
+    }
+
 
 
 }

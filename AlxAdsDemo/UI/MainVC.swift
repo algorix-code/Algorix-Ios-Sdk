@@ -17,24 +17,42 @@ class MainVC: BaseUIViewController{
         view.backgroundColor = .white
         navigationItem.title = NSLocalizedString("ad_list", comment: "")
         
-        let vStack=UIStackView()
-        vStack.translatesAutoresizingMaskIntoConstraints=false
-        view.addSubview(vStack)
-        vStack.axis = .vertical
-        vStack.spacing = 10
-        vStack.alignment = .top
+        let scrollView=UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints=false
+        view.addSubview(scrollView)
+        scrollView.isScrollEnabled=true
+        
+        let contentView=UIStackView()
+        contentView.translatesAutoresizingMaskIntoConstraints=false
+        scrollView.addSubview(contentView)
+        contentView.axis = .vertical
+        contentView.spacing = 10
+        contentView.alignment = .top
         
         let bnAlgorix=createButton(title: NSLocalizedString("algorix_ad", comment: ""), action: #selector(bnAlgorix))
-        vStack.addArrangedSubview(bnAlgorix)
+        contentView.addArrangedSubview(bnAlgorix)
+        
+        let bnMax=createButton(title: NSLocalizedString("max_ad", comment: ""), action: #selector(bnMax))
+        contentView.addArrangedSubview(bnMax)
         
         
         NSLayoutConstraint.activate([
-            vStack.leftAnchor.constraint(equalTo: view.leftAnchor),
-            vStack.rightAnchor.constraint(equalTo: view.rightAnchor),
-            vStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 10),
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leadingAnchor.constraint(equalTo:view.safeAreaLayoutGuide.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
             
-            bnAlgorix.widthAnchor.constraint(equalTo: vStack.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.contentLayoutGuide.topAnchor,constant: 20),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.contentLayoutGuide.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.frameLayoutGuide.widthAnchor),
+            
+            bnAlgorix.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnAlgorix.heightAnchor.constraint(equalToConstant: 50),
+            
+            bnMax.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            bnMax.heightAnchor.constraint(equalToConstant: 50),
             
         ])
         
@@ -86,6 +104,10 @@ class MainVC: BaseUIViewController{
     
     @objc func bnAlgorix(){
         self.navigationController?.pushViewController(AlgorixMainVC(), animated: false)
+    }
+    
+    @objc func bnMax(){
+        self.navigationController?.pushViewController(MaxMainVC(), animated: false)
     }
     
     

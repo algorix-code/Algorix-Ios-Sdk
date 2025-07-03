@@ -19,5 +19,12 @@ class AdConfig {
     static let Alx_Interstitial_Banner_Ad_Id = "176732"
     static let Alx_Native_Ad_Id = "175549"
     
+    static let Max_App_Key = "95-ffs7CG-uU8Z3exG1oky-tAdQGD1z1kHK365gIQdSIH90WNUv2fTCPFMBhVmH9Fx0o1GhhAX7DQDrnACsVIv"
+    static let Max_Banner_Ad_Id="4ce0e0a3e78b3f5b"
+    static let Max_Reward_Video_Ad_Id="1a05532b62640e63"
+    static let Max_Interstitial_Ad_Id="a4615c11c1624e9f"
+    static let Max_Interstitial_Banner_Ad_Id="9a3e74a2e6c5ca4e"
+    static let Max_Native_Ad_Id="27be3256abd0bad3"
+    
     
 }

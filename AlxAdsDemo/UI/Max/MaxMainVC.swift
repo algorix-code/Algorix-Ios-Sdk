@@ -1,25 +1,23 @@
 //
-//  AlgorixMainVC.swift
-//  AlxDemo
+//  MaxMainVC.swift
+//  AdsDemo
 //
-//  Created by liu weile on 2025/3/31.
+//  Created by liu weile on 2023/6/2.
 //
 
 import UIKit
 
-class AlgorixMainVC: BaseUIViewController {
+class MaxMainVC: BaseUIViewController {
 
     var bnBanner:UIButton!
-    var bnBannerXib:UIButton!
     var bnReward:UIButton!
     var bnInterstitial:UIButton!
-    var bnInterstitialBanner:UIButton!
     var bnNative:UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationItem.title=NSLocalizedString("algorix_ad", comment: "")
+        navigationItem.title=NSLocalizedString("max_ad", comment: "")
         
         let scrollView=UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints=false
@@ -32,20 +30,15 @@ class AlgorixMainVC: BaseUIViewController {
         contentView.axis = .vertical
         contentView.spacing = 20
 
+
         bnBanner=createButton(title: NSLocalizedString("banner_ad", comment: ""), action: #selector(buttonBanner))
         contentView.addArrangedSubview(bnBanner)
-        
-        bnBannerXib=createButton(title: NSLocalizedString("banner_ad_xib", comment: ""), action: #selector(buttonBannerXib))
-        contentView.addArrangedSubview(bnBannerXib)
 
         bnReward=createButton(title: NSLocalizedString("rewardVideo_ad", comment: ""), action: #selector(buttonReward))
         contentView.addArrangedSubview(bnReward)
 
         bnInterstitial=createButton(title: NSLocalizedString("interstitial_ad", comment: ""), action: #selector(buttonInterstitial))
         contentView.addArrangedSubview(bnInterstitial)
-        
-        bnInterstitialBanner=createButton(title: NSLocalizedString("interstitial_banner_ad", comment: ""), action: #selector(buttonInterstitialBanner))
-        contentView.addArrangedSubview(bnInterstitialBanner)
 
         bnNative=createButton(title: NSLocalizedString("native_ad", comment: ""), action: #selector(buttonNative))
         contentView.addArrangedSubview(bnNative)
@@ -66,51 +59,33 @@ class AlgorixMainVC: BaseUIViewController {
             bnBanner.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnBanner.heightAnchor.constraint(equalToConstant: 50),
 
-            bnBannerXib.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            bnBannerXib.heightAnchor.constraint(equalToConstant: 50),
-
             bnReward.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnReward.heightAnchor.constraint(equalToConstant: 50),
 
             bnInterstitial.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnInterstitial.heightAnchor.constraint(equalToConstant: 50),
 
-            bnInterstitialBanner.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            bnInterstitialBanner.heightAnchor.constraint(equalToConstant: 50),
-
             bnNative.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnNative.heightAnchor.constraint(equalToConstant: 50),
+            
         ])
         
     }
 
     @objc func buttonBanner(){
-        navigationController?.pushViewController(AlgorixBannerVC(), animated: false)
-    }
-    
-    @objc func buttonBannerXib(){
-        navigationController?.pushViewController(AlgorixBannerXibVC(), animated: false)
-//        navigationController?.pushViewController(AlgorixBannerXibVC(nibName: "AlgorixBannerXibVC", bundle: nil), animated: false)
+        navigationController?.pushViewController(MaxBannerVC(), animated: false)
     }
 
     @objc func buttonReward(){
-        navigationController?.pushViewController(AlgorixRewardVideoVC(), animated: false)
+        navigationController?.pushViewController(MaxRewardVideoVC(), animated: false)
     }
 
     @objc func buttonInterstitial(){
-        navigationController?.pushViewController(AlgorixInterstitialVC(), animated: false)
-    }
-    
-    @objc func buttonInterstitialBanner(){
-        navigationController?.pushViewController(AlgorixInterstitialBannerVC(), animated: false)
+        navigationController?.pushViewController(MaxInterstitialVC(), animated: false)
     }
 
     @objc func buttonNative(){
-        navigationController?.pushViewController(AlgorixNativeVC(), animated: false)
+        navigationController?.pushViewController(MaxNativeVC(), animated: false)
     }
-
-
-
-
 
 }

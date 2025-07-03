@@ -13,12 +13,8 @@ import UIKit
     private var model:AlxRewardVideoModel!
     
     @objc public weak var delegate:(any AlxRewardVideoAdDelegate)? {
-        get{
-            return model.delegate
-        }
-        set {
-            model.delegate = newValue
-        }
+        get { model.delegate }
+        set { model.delegate = newValue }
     }
     
     @objc public override init(){

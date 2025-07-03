@@ -15,36 +15,24 @@ import UIKit
      此视图控制器用于在用户点击广告后呈现重叠式广告，通常应设置为包含AlxBannerAdView的视图控制器
      */
     @objc @IBOutlet public weak var rootViewController:UIViewController? {
-        get{
-            return bannerRootViewController
-        }
-        set{
-            bannerRootViewController = newValue
-        }
+        get { bannerRootViewController }
+        set { bannerRootViewController = newValue }
     }
     
     /**
      设置刷新频率:单位s  【 0或30~120之间的数字。0表示不自动刷新, 默认30S 】
      */
     @objc @IBInspectable public var refreshInterval:Int {
-        get{
-            return bannerRefreshInterval
-        }
-        set{
-            bannerRefreshInterval = newValue
-        }
+        get { bannerRefreshInterval }
+        set { bannerRefreshInterval = newValue }
     }
     
     /**
      是否隐藏关闭图标
      */
     @objc @IBInspectable public var isHideClose:Bool {
-        get{
-            return bannerIsHideCloseIcon
-        }
-        set{
-            bannerIsHideCloseIcon = newValue
-        }
+        get { bannerIsHideCloseIcon }
+        set { bannerIsHideCloseIcon = newValue }
     }
 
     @objc public override init(frame:CGRect) {
