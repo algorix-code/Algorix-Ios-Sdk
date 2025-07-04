@@ -10738,21 +10738,21 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Config\/AlxConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 421,
+      "offset": 337,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Config\/AlxConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 517,
+      "offset": 433,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Ios\/alx-ads-ios-sdk\/AlxAds\/Config\/AlxConfig.swift",
       "kind": "BooleanLiteral",
-      "offset": 667,
+      "offset": 583,
       "length": 5,
       "value": "false"
     },
