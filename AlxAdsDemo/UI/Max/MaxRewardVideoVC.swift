@@ -14,7 +14,7 @@ class MaxRewardVideoVC: BaseUIViewController {
 
     private var isLoading:Bool=false
 
-    private var adUnit:MARewardedAd?
+    private var rewardAd:MARewardedAd?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,7 @@ class MaxRewardVideoVC: BaseUIViewController {
 
     
     @objc func buttonShow(){
-        if let ad=adUnit,ad.isReady {
+        if let ad=rewardAd,ad.isReady {
             ad.show()
         }else{
             print("Ad wasn't ready")
@@ -79,9 +79,9 @@ class MaxRewardVideoVC: BaseUIViewController {
     }
     
     func loadAd() {
-        adUnit=MARewardedAd.shared(withAdUnitIdentifier: AdConfig.Max_Reward_Video_Ad_Id)
-        adUnit?.delegate=self
-        adUnit?.load()
+        rewardAd=MARewardedAd.shared(withAdUnitIdentifier: AdConfig.Max_Reward_Video_Ad_Id)
+        rewardAd?.delegate=self
+        rewardAd?.load()
     }
 
 }

@@ -14,7 +14,7 @@ class MaxInterstitialVC: BaseUIViewController {
 
     private var isLoading:Bool=false
 
-    private var adUnit:MAInterstitialAd?
+    private var interstitialAd:MAInterstitialAd?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class MaxInterstitialVC: BaseUIViewController {
     }
 
     @objc func buttonShow(){
-        if let ad=adUnit,ad.isReady {
+        if let ad=interstitialAd,ad.isReady {
             ad.show()
         }else{
             print("Ad wasn't ready")
@@ -73,9 +73,9 @@ class MaxInterstitialVC: BaseUIViewController {
     }
     
     func loadAd() {
-        adUnit=MAInterstitialAd(adUnitIdentifier: AdConfig.Max_Interstitial_Ad_Id)
-        adUnit?.delegate=self
-        adUnit?.load()
+        interstitialAd=MAInterstitialAd(adUnitIdentifier: AdConfig.Max_Interstitial_Ad_Id)
+        interstitialAd?.delegate=self
+        interstitialAd?.load()
     }
     
     

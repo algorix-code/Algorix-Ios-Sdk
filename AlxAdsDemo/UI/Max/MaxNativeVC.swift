@@ -16,7 +16,7 @@ class MaxNativeVC: BaseUIViewController {
     
     private var adContainer:UIView!
 
-    private var adUnit:MANativeAdLoader?=nil
+    private var adLoader:MANativeAdLoader?=nil
     private var nativeAd:MAAd?=nil
 
     override func viewDidLoad() {
@@ -84,9 +84,9 @@ class MaxNativeVC: BaseUIViewController {
     }
     
     func loadAd() {
-        adUnit=MANativeAdLoader(adUnitIdentifier: AdConfig.Max_Native_Ad_Id)
-        adUnit?.nativeAdDelegate=self
-        adUnit?.loadAd()
+        adLoader=MANativeAdLoader(adUnitIdentifier: AdConfig.Max_Native_Ad_Id)
+        adLoader?.nativeAdDelegate=self
+        adLoader?.loadAd()
     }
     
     func renderAdTemplatesUI(_ nativeAdView: MANativeAdView){
@@ -109,7 +109,7 @@ extension MaxNativeVC:MANativeAdDelegate{
         updateUI(false, NSLocalizedString("load_success", comment: ""))
         
         if let currentNativeAd=nativeAd{
-            adUnit?.destroy(currentNativeAd)
+            adLoader?.destroy(currentNativeAd)
         }
         nativeAd=ad
         
