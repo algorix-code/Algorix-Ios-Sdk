@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		6D63FC7D678C761AA52F6F58 /* Pods_AlxAdsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF81CDE6E5E47A94D03396C6 /* Pods_AlxAdsDemo.framework */; };
+		E308165B2E3719C9002E3112 /* AlgorixAdmobMediationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816572E3719C9002E3112 /* AlgorixAdmobMediationAdapter.swift */; };
+		E308165C2E3719C9002E3112 /* AlgorixAdmobMetaInf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816582E3719C9002E3112 /* AlgorixAdmobMetaInf.swift */; };
+		E308165D2E3719C9002E3112 /* AlgorixAdmobNativeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816592E3719C9002E3112 /* AlgorixAdmobNativeAdapter.swift */; };
+		E308165E2E3719C9002E3112 /* AlgorixAdmobBannerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816542E3719C9002E3112 /* AlgorixAdmobBannerAdapter.swift */; };
+		E308165F2E3719C9002E3112 /* AlgorixAdmobBaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816552E3719C9002E3112 /* AlgorixAdmobBaseAdapter.swift */; };
+		E30816602E3719C9002E3112 /* AlgorixAdmobRewardAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E308165A2E3719C9002E3112 /* AlgorixAdmobRewardAdapter.swift */; };
+		E30816612E3719C9002E3112 /* AlgorixAdmobInterstitialAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816562E3719C9002E3112 /* AlgorixAdmobInterstitialAdapter.swift */; };
+		E30816682E3719EF002E3112 /* AdmobMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816652E3719EE002E3112 /* AdmobMainVC.swift */; };
+		E30816692E3719EF002E3112 /* AdmobNativeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816662E3719EE002E3112 /* AdmobNativeVC.swift */; };
+		E308166A2E3719EF002E3112 /* AdmobRewardVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816672E3719EE002E3112 /* AdmobRewardVideoVC.swift */; };
+		E308166B2E3719EF002E3112 /* AdmobInterstitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816642E3719EE002E3112 /* AdmobInterstitialVC.swift */; };
+		E308166C2E3719EF002E3112 /* AdmobBannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30816632E3719EE002E3112 /* AdmobBannerVC.swift */; };
 		E319563F2DF7D9D60083BC3C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E319563D2DF7D9D60083BC3C /* Localizable.strings */; };
 		E319564B2DF7DA6F0083BC3C /* AlgorixBannerXibVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E31956482DF7DA6F0083BC3C /* AlgorixBannerXibVC.xib */; };
 		E319564C2DF7DA6F0083BC3C /* AlgorixBannerXibVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31956472DF7DA6F0083BC3C /* AlgorixBannerXibVC.swift */; };
@@ -52,6 +64,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E30816542E3719C9002E3112 /* AlgorixAdmobBannerAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobBannerAdapter.swift; sourceTree = "<group>"; };
+		E30816552E3719C9002E3112 /* AlgorixAdmobBaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobBaseAdapter.swift; sourceTree = "<group>"; };
+		E30816562E3719C9002E3112 /* AlgorixAdmobInterstitialAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobInterstitialAdapter.swift; sourceTree = "<group>"; };
+		E30816572E3719C9002E3112 /* AlgorixAdmobMediationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobMediationAdapter.swift; sourceTree = "<group>"; };
+		E30816582E3719C9002E3112 /* AlgorixAdmobMetaInf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobMetaInf.swift; sourceTree = "<group>"; };
+		E30816592E3719C9002E3112 /* AlgorixAdmobNativeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobNativeAdapter.swift; sourceTree = "<group>"; };
+		E308165A2E3719C9002E3112 /* AlgorixAdmobRewardAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobRewardAdapter.swift; sourceTree = "<group>"; };
+		E30816632E3719EE002E3112 /* AdmobBannerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobBannerVC.swift; sourceTree = "<group>"; };
+		E30816642E3719EE002E3112 /* AdmobInterstitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobInterstitialVC.swift; sourceTree = "<group>"; };
+		E30816652E3719EE002E3112 /* AdmobMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobMainVC.swift; sourceTree = "<group>"; };
+		E30816662E3719EE002E3112 /* AdmobNativeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobNativeVC.swift; sourceTree = "<group>"; };
+		E30816672E3719EE002E3112 /* AdmobRewardVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdmobRewardVideoVC.swift; sourceTree = "<group>"; };
 		E31956362DF7D9300083BC3C /* AlxAds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlxAds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E319563A2DF7D9350083BC3C /* AlxDevelop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AlxDevelop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E319563E2DF7D9D60083BC3C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -110,6 +134,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E30816532E37197F002E3112 /* AdmobAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				E30816542E3719C9002E3112 /* AlgorixAdmobBannerAdapter.swift */,
+				E30816552E3719C9002E3112 /* AlgorixAdmobBaseAdapter.swift */,
+				E30816562E3719C9002E3112 /* AlgorixAdmobInterstitialAdapter.swift */,
+				E30816572E3719C9002E3112 /* AlgorixAdmobMediationAdapter.swift */,
+				E30816582E3719C9002E3112 /* AlgorixAdmobMetaInf.swift */,
+				E30816592E3719C9002E3112 /* AlgorixAdmobNativeAdapter.swift */,
+				E308165A2E3719C9002E3112 /* AlgorixAdmobRewardAdapter.swift */,
+			);
+			path = AdmobAdapter;
+			sourceTree = "<group>";
+		};
+		E30816622E3719D1002E3112 /* Admob */ = {
+			isa = PBXGroup;
+			children = (
+				E30816632E3719EE002E3112 /* AdmobBannerVC.swift */,
+				E30816642E3719EE002E3112 /* AdmobInterstitialVC.swift */,
+				E30816652E3719EE002E3112 /* AdmobMainVC.swift */,
+				E30816662E3719EE002E3112 /* AdmobNativeVC.swift */,
+				E30816672E3719EE002E3112 /* AdmobRewardVideoVC.swift */,
+			);
+			path = Admob;
+			sourceTree = "<group>";
+		};
 		E31956492DF7DA6F0083BC3C /* BannerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +216,7 @@
 		E33E7AE22DD4AA4500C724B9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E30816622E3719D1002E3112 /* Admob */,
 				E336DFEF2E16652000B237C0 /* Max */,
 				E33E7AE92DD4AA8800C724B9 /* Algorix */,
 				E31956532DF7DA940083BC3C /* MainVC.swift */,
@@ -224,6 +275,7 @@
 		E3EC00612DD4933B00485DAF /* AlxAdsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E30816532E37197F002E3112 /* AdmobAdapter */,
 				E336DFEC2E16625400B237C0 /* MaxAdapter */,
 				E33E7AEA2DD4AAB600C724B9 /* Extensions */,
 				E33E7AE32DD4AA5C00C724B9 /* Assets */,
@@ -265,6 +317,7 @@
 				E3EC005D2DD4933B00485DAF /* Resources */,
 				E3DE70632DF80C1000C5626A /* Embed Frameworks */,
 				ECBB5E4E1CDC36CDB657015F /* [CP] Embed Pods Frameworks */,
+				0DCF171BF5864C9E08BC4DA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -348,6 +401,27 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0DCF171BF5864C9E08BC4DA2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		ECBB5E4E1CDC36CDB657015F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +462,18 @@
 				E33E7AEC2DD4AACF00C724B9 /* UIImageView+Extensions.swift in Sources */,
 				E336DFF52E16654200B237C0 /* MaxInterstitialVC.swift in Sources */,
 				E336DFF62E16654200B237C0 /* MaxRewardVideoVC.swift in Sources */,
+				E308165B2E3719C9002E3112 /* AlgorixAdmobMediationAdapter.swift in Sources */,
+				E30816682E3719EF002E3112 /* AdmobMainVC.swift in Sources */,
+				E30816692E3719EF002E3112 /* AdmobNativeVC.swift in Sources */,
+				E308166A2E3719EF002E3112 /* AdmobRewardVideoVC.swift in Sources */,
+				E308166B2E3719EF002E3112 /* AdmobInterstitialVC.swift in Sources */,
+				E308166C2E3719EF002E3112 /* AdmobBannerVC.swift in Sources */,
+				E308165C2E3719C9002E3112 /* AlgorixAdmobMetaInf.swift in Sources */,
+				E308165D2E3719C9002E3112 /* AlgorixAdmobNativeAdapter.swift in Sources */,
+				E308165E2E3719C9002E3112 /* AlgorixAdmobBannerAdapter.swift in Sources */,
+				E308165F2E3719C9002E3112 /* AlgorixAdmobBaseAdapter.swift in Sources */,
+				E30816602E3719C9002E3112 /* AlgorixAdmobRewardAdapter.swift in Sources */,
+				E30816612E3719C9002E3112 /* AlgorixAdmobInterstitialAdapter.swift in Sources */,
 				E336DFF72E16654200B237C0 /* MaxMainVC.swift in Sources */,
 				E336DFF82E16654200B237C0 /* MaxBannerVC.swift in Sources */,
 				E336DFF92E16654200B237C0 /* MaxNativeVC.swift in Sources */,

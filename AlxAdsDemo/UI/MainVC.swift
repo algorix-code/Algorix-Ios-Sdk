@@ -35,6 +35,9 @@ class MainVC: BaseUIViewController{
         let bnMax=createButton(title: NSLocalizedString("max_ad", comment: ""), action: #selector(bnMax))
         contentView.addArrangedSubview(bnMax)
         
+        let bnAdmob=createButton(title: NSLocalizedString("admob_ad", comment: ""), action: #selector(bnAdmob))
+        contentView.addArrangedSubview(bnAdmob)
+        
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -53,6 +56,9 @@ class MainVC: BaseUIViewController{
             
             bnMax.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnMax.heightAnchor.constraint(equalToConstant: 50),
+            
+            bnAdmob.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            bnAdmob.heightAnchor.constraint(equalToConstant: 50),
             
         ])
         
@@ -108,6 +114,10 @@ class MainVC: BaseUIViewController{
     
     @objc func bnMax(){
         self.navigationController?.pushViewController(MaxMainVC(), animated: false)
+    }
+    
+    @objc func bnAdmob(){
+        self.navigationController?.pushViewController(AdmobMainVC(), animated: false)
     }
     
     

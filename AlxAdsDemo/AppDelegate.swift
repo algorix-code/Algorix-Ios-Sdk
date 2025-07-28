@@ -7,18 +7,14 @@
 
 import UIKit
 import AlxAds
-import AppLovinSDK
 
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         initAlgorix()
-        initMax()
         return true
     }
 
@@ -43,21 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AlxSdk.addExtraParameters(key:"uid2_token",value:"NewAdvertisingTokenIjb6u6KcMAt=")
     }
     
-    private func initMax(){
-        let initConfig = ALSdkInitializationConfiguration(sdkKey: AdConfig.Max_App_Key) { builder in
-            builder.mediationProvider = ALMediationProviderMAX
-        }
-        
-        
-        ALPrivacySettings.setDoNotSell(false)
-        ALPrivacySettings.setHasUserConsent(true)
-
-          // Initialize the SDK with the configuration
-        ALSdk.shared().initialize(with: initConfig) { sdkConfig in
-        // Start loading ads
-        }
-    }
-
+    
 
 
 }

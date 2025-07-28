@@ -26,5 +26,11 @@ class AdConfig {
     static let Max_Interstitial_Banner_Ad_Id="9a3e74a2e6c5ca4e"
     static let Max_Native_Ad_Id="27be3256abd0bad3"
     
+    static let Admob_App_Id="ca-app-pub-2258587227088809~1554295176"
+    static let Admob_Banner_Ad_Id="ca-app-pub-2258587227088809/3393118310"
+    static let Admob_Reward_Video_Ad_Id="ca-app-pub-2258587227088809/3217541268"
+    static let Admob_Interstitial_Ad_Id="ca-app-pub-2258587227088809/1043955443"
+    static let Admob_Native_Ad_Id="ca-app-pub-2258587227088809/1521316212"
+    
     
 }

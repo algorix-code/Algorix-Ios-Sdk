@@ -10,6 +10,8 @@ target 'AlxAdsDemo' do
   # 添加SDK依赖库
   # max 广告sdk
    pod 'AppLovinSDK', '13.3.0'
+  # google admob 广告sdk
+   pod 'Google-Mobile-Ads-SDK', '12.6.0'
    
 end
 

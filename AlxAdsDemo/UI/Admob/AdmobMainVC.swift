@@ -1,14 +1,15 @@
 //
-//  MaxMainVC.swift
+//  AdmobMainVC.swift
 //  AdsDemo
 //
-//  Created by liu weile on 2023/6/2.
+//  Created by liu weile on 2023/5/30.
 //
 
-import UIKit
-import AppLovinSDK
 
-class MaxMainVC: BaseUIViewController {
+import UIKit
+import GoogleMobileAds
+
+class AdmobMainVC: BaseUIViewController {
 
     var bnBanner:UIButton!
     var bnReward:UIButton!
@@ -18,11 +19,11 @@ class MaxMainVC: BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationItem.title=NSLocalizedString("max_ad", comment: "")
-        
+        navigationItem.title=NSLocalizedString("admob_ad", comment: "")
+
         // Mark: init SDK
         initSDK()
-        
+
         let scrollView=UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints=false
         view.addSubview(scrollView)
@@ -77,35 +78,30 @@ class MaxMainVC: BaseUIViewController {
     }
 
     @objc func buttonBanner(){
-        navigationController?.pushViewController(MaxBannerVC(), animated: false)
+        navigationController?.pushViewController(AdmobBannerVC(), animated: false)
     }
 
     @objc func buttonReward(){
-        navigationController?.pushViewController(MaxRewardVideoVC(), animated: false)
+        navigationController?.pushViewController(AdmobRewardVideoVC(), animated: false)
     }
 
     @objc func buttonInterstitial(){
-        navigationController?.pushViewController(MaxInterstitialVC(), animated: false)
+        navigationController?.pushViewController(AdmobInterstitialVC(), animated: false)
     }
 
     @objc func buttonNative(){
-        navigationController?.pushViewController(MaxNativeVC(), animated: false)
+        navigationController?.pushViewController(AdmobNativeVC(), animated: false)
     }
+
     
     private func initSDK(){
-        let initConfig = ALSdkInitializationConfiguration(sdkKey: AdConfig.Max_App_Key) { builder in
-            builder.mediationProvider = ALMediationProviderMAX
-        }
-        
-        let settings = ALSdk.shared().settings
-        settings.setExtraParameterForKey("uid2_token", value: "liuweileliuweile")
-        
-        ALPrivacySettings.setDoNotSell(false)
-        ALPrivacySettings.setHasUserConsent(true)
-
-          // Initialize the SDK with the configuration
-        ALSdk.shared().initialize(with: initConfig) { sdkConfig in
-        // Start loading ads
+        MobileAds.shared.start(){status in
+            let adapterStatuses = status.adapterStatusesByClassName
+            for adapter in adapterStatuses {
+                let adapterStatus = adapter.value
+                NSLog("Adapter Name: %@, Description: %@, Latency: %f", adapter.key,
+                adapterStatus.description, adapterStatus.latency)
+            }
         }
     }
 
