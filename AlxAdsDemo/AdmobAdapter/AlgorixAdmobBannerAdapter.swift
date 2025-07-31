@@ -46,6 +46,7 @@ public class AlgorixAdmobBannerAdapter:AlgorixAdmobBaseAdapter,MediationBannerAd
         let adSize = CGSize(width: adConfiguration.adSize.size.width, height: adConfiguration.adSize.size.height)
         self.bannerAd=AlxBannerAdView(frame: CGRect(origin: .zero, size: adSize))
         self.bannerAd?.delegate = self
+        self.bannerAd?.refreshInterval = 0
         self.bannerAd?.rootViewController=adConfiguration.topViewController
         self.bannerAd?.loadAd(adUnitId: adId)
     }

@@ -14,7 +14,7 @@ import AppLovinSDK
 public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAAdViewAdapter,MARewardedAdapter,MAInterstitialAdapter,MANativeAdAdapter {
     
     private static let TAG = "AlgorixMaxMediationAdapter"
-    private static let ADAPTER_VERSION = "1.1.0"
+    private static let ADAPTER_VERSION = "1.3.0"
     
     private var bannerAd:AlxBannerAdView? = nil
     private var bannerAdDelegate:MAAdViewAdapterDelegate? = nil
@@ -61,6 +61,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
         let adSize = CGSize(width: adFormat.adaptiveSize.width, height: adFormat.adaptiveSize.height)
         self.bannerAd=AlxBannerAdView(frame: CGRect(origin: .zero, size: adSize))
         self.bannerAd?.delegate = self
+        self.bannerAd?.refreshInterval = 0
         self.bannerAd?.rootViewController=viewController
         self.bannerAd?.loadAd(adUnitId: adId)
     }
@@ -100,7 +101,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
         
         self.interstitialAd=AlxInterstitialAd()
         self.interstitialAd?.delegate = self
-        self.interstitialAd?.loadAd(adUnitId: adId)        
+        self.interstitialAd?.loadAd(adUnitId: adId)
     }
     
     public func showInterstitialAd(for parameters: any MAAdapterResponseParameters, andNotify delegate: any MAInterstitialAdapterDelegate) {
@@ -120,7 +121,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
         }
         let adId=parameters.thirdPartyAdPlacementIdentifier
         self.nativeParameters = parameters
-//        let templateName = parameters.serverParameters["template"] as? String ?? ""
+        //        let templateName = parameters.serverParameters["template"] as? String ?? ""
         
         self.nativeAdDelegate=delegate
         let loader=AlxNativeAdLoader(adUnitID: adId)
@@ -163,7 +164,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
         AlxSdk.addExtraParameters(key:"alx_adapter",value:data)
     }
     
-   
+    
     @discardableResult
     private func initSdk(for parameters: any MAAdapterParameters)->Bool{
         let params=parameters.customParameters
@@ -171,13 +172,13 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
         let sid:String?=params["sid"] as? String
         let token:String?=params["token"] as? String
         let debug:String?=params["isdebug"] as? String
-       
+        
         guard let appid=appid,let sid=sid,let token=token else{
-           let errorStr="initialize alx params: appid or sid or token is empty"
-           NSLog("%@: error: %@",AlgorixMaxMediationAdapter.TAG,errorStr)
-           return false
+            let errorStr="initialize alx params: appid or sid or token is empty"
+            NSLog("%@: error: %@",AlgorixMaxMediationAdapter.TAG,errorStr)
+            return false
         }
-       
+        
         NSLog("%@: token=%@; appid=%@; sid=%@",AlgorixMaxMediationAdapter.TAG,token,appid,sid)
         AlxSdk.initializeSDK(token: token, sid: sid, appId: appid)
         AlgorixMaxMediationAdapter.isInitialized = true
@@ -190,7 +191,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
                 AlxSdk.setDebug(false)
             }
         }
-       
+        
         
         //set extra params
         let settings = ALSdk.shared().settings.extraParameters
@@ -201,20 +202,29 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
         
         // User Privacy
         // MARK: - GDPR Consent Handling
-        if ALPrivacySettings.hasUserConsent() {
-           AlxSdk.setGDPRConsent(true)
-            if let consentString = parameters.consentString {
-                AlxSdk.setGDPRConsentMessage(consentString)
-            } else if let gdprConsent = UserDefaults.standard.string(forKey: "IABTCF_TCString") {
-                // Directly use String-type consent (e.g., IAB TCF consent string)
-               AlxSdk.setGDPRConsentMessage(gdprConsent)
-           }
-       } else {
-           // Default: No consent
-           AlxSdk.setGDPRConsent(false)
-       }
-
-       // MARK: - CCPA Handling (US Privacy)
+        let gdprFlag = UserDefaults.standard.integer(forKey: "IABTCF_gdprApplies")
+        let gdprConsent = UserDefaults.standard.string(forKey: "IABTCF_TCString")
+        // tcf v2 consent
+        if gdprFlag == 1{
+            AlxSdk.setGDPRConsent(true)
+            AlxSdk.setGDPRConsentMessage(gdprConsent ?? "")
+        }else  {
+            // max setting
+            if ALPrivacySettings.hasUserConsent() {
+                AlxSdk.setGDPRConsent(true)
+                if let consentString = parameters.consentString {
+                    AlxSdk.setGDPRConsentMessage(consentString)
+                } else if let gdprConsent {
+                    // Directly use String-type consent (e.g., IAB TCF consent string)
+                    AlxSdk.setGDPRConsentMessage(gdprConsent)
+                }
+            }else{
+                AlxSdk.setGDPRConsent(false)
+                AlxSdk.setGDPRConsentMessage(gdprConsent ?? "")
+            }
+        }
+        
+        // MARK: - CCPA Handling (US Privacy)
         AlxSdk.setCCPA(ALPrivacySettings.isDoNotSell() ? "1" : "0")
         
         return true
@@ -231,7 +241,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
                 builder.body = nativeAd.desc
                 builder.callToAction = nativeAd.callToAction
                 builder.advertiser = nativeAd.adSource
-               
+                
                 if let iconUrlString = nativeAd.icon?.url {
                     if let iconUrl = URL(string: iconUrlString) {
                         builder.icon = MANativeAdImage(url: iconUrl)
@@ -244,7 +254,7 @@ public class AlgorixMaxMediationAdapter: ALMediationAdapter,MASignalProvider,MAA
                     mediaView.setMediaContent(mediaContent)
                     builder.mediaView = mediaView
                 }
-               
+                
                 
                 let mainImage:AlxNativeAdImage? = nativeAd.images?.first
                 if let imageUrlString = mainImage?.url {
@@ -336,7 +346,7 @@ extension AlgorixMaxMediationAdapter:AlxInterstitialAdDelegate {
     public func interstitialAdVideoEnd(_ ad: AlxInterstitialAd) {
         NSLog("%@: interstitialAdVideoEnd",AlgorixMaxMediationAdapter.TAG)
     }
-   
+    
 }
 
 
@@ -385,7 +395,7 @@ extension AlgorixMaxMediationAdapter:AlxRewardVideoAdDelegate{
         NSLog("%@: rewardVideoAdPlayFail",AlgorixMaxMediationAdapter.TAG)
     }
     
-        
+    
     
 }
 
@@ -402,7 +412,7 @@ extension AlgorixMaxMediationAdapter:AlxNativeAdLoaderDelegate{
         self.nativeAd = nativeAd
         
         let maxNativeAd = MaxAlxNativeAd(nativeAd: nativeAd)
-//                let templateName = self.nativeParameters?.serverParameters["template"] as? String ?? ""
+        //                let templateName = self.nativeParameters?.serverParameters["template"] as? String ?? ""
         let viewController:UIViewController = self.nativeParameters?.presentingViewController ?? ALUtils.topViewControllerFromKeyWindow()
         
         nativeAd.delegate = self
