@@ -10,6 +10,8 @@ import GoogleMobileAds
 
 class AdmobNativeVC: BaseUIViewController {
     
+    private let TAG = "Admob-native:"
+    
     private var label:UILabel!
 
     private var isLoading:Bool=false
@@ -194,11 +196,13 @@ class AdmobNativeVC: BaseUIViewController {
 
 extension AdmobNativeVC:NativeAdLoaderDelegate{
     func adLoader(_ adLoader: AdLoader, didReceive nativeAd: NativeAd) {
+        print("\(TAG) adLoader")
         renderAdUI(nativeAd)
     }
     
     
     func adLoaderDidFinishLoading(_ adLoader: AdLoader) {
+        print("\(TAG) adLoaderDidFinishLoading")
         updateUI(false, NSLocalizedString("load_success", comment: ""))
     }
     
@@ -206,7 +210,7 @@ extension AdmobNativeVC:NativeAdLoaderDelegate{
     func adLoader(_ adLoader: AdLoader, didFailToReceiveAdWithError error: Error) {
         let error1=error as NSError
         let msg="\(error1.code): \(error1.localizedDescription)"
-        NSLog("load failed: \(msg)")
+        print("\(TAG) adLoader: error: \(msg)")
         updateUI(false, String(format: NSLocalizedString("load_failed", comment: ""), msg))
     }
     
@@ -215,14 +219,14 @@ extension AdmobNativeVC:NativeAdLoaderDelegate{
 extension AdmobNativeVC: NativeAdDelegate{
     
     func nativeAdDidRecordImpression(_ nativeAd: NativeAd) {
-        NSLog("impression")
+        print("\(TAG) nativeAdDidRecordImpression")
     }
     
     func nativeAdDidRecordClick(_ nativeAd: NativeAd) {
-        NSLog("click")
+        print("\(TAG) nativeAdDidRecordClick")
     }
     
     func nativeAdWillPresentScreen(_ nativeAd: NativeAd) {
-        NSLog("nativeAdWillPresentScreen")
+        print("\(TAG) nativeAdWillPresentScreen")
     }
 }

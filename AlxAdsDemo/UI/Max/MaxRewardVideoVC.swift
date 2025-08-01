@@ -9,6 +9,8 @@ import UIKit
 import AppLovinSDK
 
 class MaxRewardVideoVC: BaseUIViewController {
+    
+    private let TAG = "Max-rewardVideo:"
 
     private var label:UILabel!
 
@@ -89,34 +91,34 @@ class MaxRewardVideoVC: BaseUIViewController {
 extension MaxRewardVideoVC:MARewardedAdDelegate{
     
     func didLoad(_ ad: MAAd) {
-        print("didLoad")
+        print("\(TAG) didLoad")
         updateUI(false, NSLocalizedString("load_success", comment: ""))
     }
     
     func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
         let msg="\(error.code): \(error.description)"
-        print("didFailToLoadAd: \(msg)")
+        print("\(TAG) didFailToLoadAd: \(msg)")
         updateUI(false, String(format: NSLocalizedString("load_failed", comment: ""), msg))
     }
     
     func didDisplay(_ ad: MAAd) {
-        print("display")
+        print("\(TAG) didDisplay")
     }
     
     func didHide(_ ad: MAAd) {
-        print("hide")
+        print("\(TAG) didHide")
     }
     
     func didClick(_ ad: MAAd) {
-        print("click")
+        print("\(TAG) didClick")
     }
     
     func didFail(toDisplay ad: MAAd, withError error: MAError) {
-        print("\(error.code) \(error.description)")
+        print("\(TAG) didFail:\(error.code) \(error.description)")
     }
     
     func didRewardUser(for ad: MAAd, with reward: MAReward) {
-        
+        print("\(TAG) didRewardUser")
     }
     
     

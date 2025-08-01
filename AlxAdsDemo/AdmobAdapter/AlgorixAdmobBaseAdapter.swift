@@ -130,13 +130,6 @@ public class AlgorixAdmobBaseAdapter: NSObject,MediationAdapter {
         }
         
         
-        //set extra params
-        //        let settings = ALSdk.shared().settings.extraParameters
-        //        for (key, value) in settings {
-        //            NSLog("%@: max extra parameters: key= %@,value=%@",AlgorixAdmobBaseAdapter.TAG,key,value)
-        //            AlxSdk.addExtraParameters(key: key, value: value)
-        //        }
-        
         // User Privacy
         // MARK: - GDPR Consent Handling
         let gdprFlag = UserDefaults.standard.integer(forKey: "IABTCF_gdprApplies")
@@ -144,14 +137,10 @@ public class AlgorixAdmobBaseAdapter: NSObject,MediationAdapter {
         // tcf v2 consent
         if gdprFlag == 1{
             AlxSdk.setGDPRConsent(true)
-            AlxSdk.setGDPRConsentMessage(gdprConsent ?? "")
         }else  {
             AlxSdk.setGDPRConsent(false)
-            AlxSdk.setGDPRConsentMessage(gdprConsent ?? "")
         }
-        
-        // MARK: - CCPA Handling (US Privacy)
-        //        AlxSdk.setCCPA(ALPrivacySettings.isDoNotSell() ? "1" : "0")
+        AlxSdk.setGDPRConsentMessage(gdprConsent ?? "")
         
         return (success:true,error:"ok")
     }

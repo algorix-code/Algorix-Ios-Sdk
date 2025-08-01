@@ -10,6 +10,8 @@ import AlxAds
 
 class AlgorixNativeVC: BaseUIViewController {
     
+    private let TAG = "Algorix-native:"
+    
     private var label:UILabel!
     
     private var isLoading:Bool=false
@@ -238,12 +240,11 @@ class AlgorixNativeVC: BaseUIViewController {
 
 extension AlgorixNativeVC:AlxNativeAdLoaderDelegate{
     func nativeAdLoaded(didReceive ads: [AlxNativeAd]) {
-        NSLog("nativeAdLoaded")
+        print("\(TAG) nativeAdLoaded")
         self.isLoading=false
         self.label.text=NSLocalizedString("load_success", comment: "")
         
         if let ad = ads.first {
-            NSLog("nativeAdLoaded price: \(ad.getPrice())")
             ad.reportBiddingUrl()
             ad.reportChargingUrl()
             
@@ -255,7 +256,7 @@ extension AlgorixNativeVC:AlxNativeAdLoaderDelegate{
     func nativeAdFailToLoad(didFailWithError error: Error) {
         let error1=error as NSError
         let msg="\(error1.code): \(error1.localizedDescription)"
-        NSLog("nativeAdFailedToLoad: \(msg)")
+        print("\(TAG) nativeAdFailedToLoad: \(msg)")
         
         self.isLoading=false
         self.label.text=String(format: NSLocalizedString("load_failed", comment: ""), msg)
@@ -266,15 +267,15 @@ extension AlgorixNativeVC:AlxNativeAdLoaderDelegate{
 
 extension AlgorixNativeVC:AlxNativeAdDelegate{
     func nativeAdImpression(_ nativeAd:AlxNativeAd){
-        NSLog("nativeAdImpression")
+        print("\(TAG) nativeAdImpression")
     }
     
     func nativeAdClick(_ nativeAd:AlxNativeAd){
-        NSLog("nativeAdClick")
+        print("\(TAG) nativeAdClick")
     }
     
     func nativeAdClose(_ nativeAd:AlxNativeAd){
-        NSLog("nativeAdClose")
+        print("\(TAG) nativeAdClose")
         self.closeAd()
     }
 }

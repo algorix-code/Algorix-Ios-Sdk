@@ -14,13 +14,10 @@ public class AlgorixAdmobRewardAdapter:AlgorixAdmobBaseAdapter,MediationRewarded
     
     private static let TAG = "AlgorixAdmobRewardAdapter"
     
-    var rewardedAd: AlxRewardVideoAd?
-    
-    var delegate: MediationRewardedAdEventDelegate?
-
-    var completionHandler: GADMediationRewardedLoadCompletionHandler?
+    private var rewardedAd: AlxRewardVideoAd? = nil
+    private var delegate: MediationRewardedAdEventDelegate? = nil
+    private var completionHandler: GADMediationRewardedLoadCompletionHandler? = nil
    
-    
     public func loadRewardedAd(for adConfiguration: MediationRewardedAdConfiguration, completionHandler: @escaping GADMediationRewardedLoadCompletionHandler) {
         NSLog("%@: loadRewardedAd",AlgorixAdmobRewardAdapter.TAG)
         guard let params = AlgorixAdmobBaseAdapter.parseAdparameter(for: adConfiguration.credentials) else {
@@ -41,27 +38,21 @@ public class AlgorixAdmobRewardAdapter:AlgorixAdmobBaseAdapter,MediationRewarded
             return
         }
         
+        NSLog("%@: loadRewardedAd unitid=%@",AlgorixAdmobRewardAdapter.TAG,adId)
         self.completionHandler = completionHandler
         
         // load ad
-        rewardedAd = AlxRewardVideoAd()
-        rewardedAd?.delegate = self
-        rewardedAd?.loadAd(adUnitId: adId)
-    }
-    
-    func createAd(adUnit:String) {
-        rewardedAd=AlxRewardVideoAd()
-        rewardedAd?.delegate = self
-        rewardedAd?.loadAd(adUnitId: adUnit)
+        self.rewardedAd = AlxRewardVideoAd()
+        self.rewardedAd?.delegate = self
+        self.rewardedAd?.loadAd(adUnitId: adId)
     }
     
     public func present(from viewController: UIViewController) {
-        guard let rewardedAd = rewardedAd,rewardedAd.isReady() else{
-            return
+        NSLog("%@: present",AlgorixAdmobRewardAdapter.TAG)
+        if let rewardedAd = self.rewardedAd,rewardedAd.isReady(){
+            rewardedAd.showAd(present: viewController)
         }
-        rewardedAd.showAd(present: viewController)
     }
-    
     
 }
 
@@ -83,6 +74,7 @@ extension AlgorixAdmobRewardAdapter:AlxRewardVideoAdDelegate{
     
     public func rewardVideoAdImpression(_ ad: AlxRewardVideoAd) {
         NSLog("%@: rewardVideoAdImpression",AlgorixAdmobRewardAdapter.TAG)
+        self.delegate?.willPresentFullScreenView()
         self.delegate?.reportImpression()
     }
     

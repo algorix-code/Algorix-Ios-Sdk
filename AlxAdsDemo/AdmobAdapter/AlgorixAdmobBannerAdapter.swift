@@ -40,6 +40,7 @@ public class AlgorixAdmobBannerAdapter:AlgorixAdmobBaseAdapter,MediationBannerAd
             return
         }
         
+        NSLog("%@: loadBanner unitid=%@",AlgorixAdmobBannerAdapter.TAG,adId)
         self.completionHandler = completionHandler
         
         // load ad

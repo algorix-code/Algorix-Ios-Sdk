@@ -18,7 +18,7 @@ public class AlgorixAdmobInterstitialAdapter: AlgorixAdmobBaseAdapter,MediationI
     private var completionHandler: GADMediationInterstitialLoadCompletionHandler? = nil
     
     public func loadInterstitial(for adConfiguration: MediationInterstitialAdConfiguration, completionHandler: @escaping GADMediationInterstitialLoadCompletionHandler) {
-        NSLog("%@: loadRewardedAd",AlgorixAdmobInterstitialAdapter.TAG)
+        NSLog("%@: loadInterstitial",AlgorixAdmobInterstitialAdapter.TAG)
         guard let params = AlgorixAdmobBaseAdapter.parseAdparameter(for: adConfiguration.credentials) else {
             let errorStr="The parameter field is not found in the adConfiguration object"
             NSLog("%@: config params is empty",AlgorixAdmobInterstitialAdapter.TAG)
@@ -37,10 +37,11 @@ public class AlgorixAdmobInterstitialAdapter: AlgorixAdmobBaseAdapter,MediationI
             return
         }
         
+        NSLog("%@: loadInterstitial unitid=%@",AlgorixAdmobInterstitialAdapter.TAG,adId)
         self.completionHandler = completionHandler
         
         // load ad
-        self.interstitialAd=AlxInterstitialAd()
+        self.interstitialAd = AlxInterstitialAd()
         self.interstitialAd?.delegate = self
         self.interstitialAd?.loadAd(adUnitId: adId)
     }
@@ -74,6 +75,7 @@ extension AlgorixAdmobInterstitialAdapter:AlxInterstitialAdDelegate {
     
     public func interstitialAdImpression(_ ad: AlxInterstitialAd) {
         NSLog("%@: interstitialAdImpression",AlgorixAdmobInterstitialAdapter.TAG)
+        self.delegate?.willPresentFullScreenView()
         self.delegate?.reportImpression()
     }
     

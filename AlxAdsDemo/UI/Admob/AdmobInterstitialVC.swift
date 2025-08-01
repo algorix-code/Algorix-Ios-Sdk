@@ -9,6 +9,8 @@ import UIKit
 import GoogleMobileAds
 
 class AdmobInterstitialVC: BaseUIViewController {
+    
+    private let TAG = "Admob-interstitial:"
 
     private var label:UILabel!
 
@@ -80,11 +82,11 @@ class AdmobInterstitialVC: BaseUIViewController {
             if let error = error {
                 let error1 = error as NSError
                 let msg="\(error1.code): \(error1.localizedDescription)"
-                NSLog("load failed: \(msg)")
+                print("\(TAG) load: errror: \(msg)")
                 updateUI(false, String(format: NSLocalizedString("load_failed", comment: ""), msg))
                 return
             }
-            NSLog("load success")
+            print("\(TAG) load: success")
             updateUI(false, NSLocalizedString("load_success", comment: ""))
             self.interstitialAd = ad
             self.interstitialAd?.fullScreenContentDelegate=self
@@ -100,18 +102,33 @@ class AdmobInterstitialVC: BaseUIViewController {
 
 extension AdmobInterstitialVC:FullScreenContentDelegate{
     /// Tells the delegate that the ad failed to present full screen content.
-      func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("Ad did fail to present full screen content.")
-      }
+    func ad(_ ad: FullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        let error1 = error as NSError
+        let msg = "\(error1.code): \(error1.localizedDescription)"
+        print("\(TAG) ad: error:\(msg)")
+    }
 
-      /// Tells the delegate that the ad will present full screen content.
-      func adWillPresentFullScreenContent(_ ad: FullScreenPresentingAd) {
-        print("Ad will present full screen content.")
-      }
+    /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent(_ ad: FullScreenPresentingAd) {
+        print("\(TAG) adWillPresentFullScreenContent")
+    }
 
-      /// Tells the delegate that the ad dismissed full screen content.
-      func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) {
-        print("Ad did dismiss full screen content.")
-      }
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: FullScreenPresentingAd) {
+        print("\(TAG) adDidDismissFullScreenContent")
+    }
+    
+    func adDidRecordImpression(_ ad: any FullScreenPresentingAd) {
+        print("\(TAG) adDidRecordImpression")
+    }
+    
+    func adDidRecordClick(_ ad: any FullScreenPresentingAd) {
+        print("\(TAG) adDidRecordClick")
+    }
+    
+    func adWillDismissFullScreenContent(_ ad: any FullScreenPresentingAd) {
+        print("\(TAG) adWillDismissFullScreenContent")
+    }
+    
 }
 

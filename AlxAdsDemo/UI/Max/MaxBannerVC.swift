@@ -10,6 +10,8 @@ import AppLovinSDK
 
 class MaxBannerVC: BaseUIViewController {
     
+    private let TAG = "Max-banner:"
+    
     private var label:UILabel!
 
     private var isLoading:Bool=false
@@ -74,7 +76,7 @@ class MaxBannerVC: BaseUIViewController {
         bannerView.setLocalExtraParameterForKey("adaptive_banner_width", value: 400)
 //        bannerView.getAdFormat().getAdaptiveSize(400).getHeight() // Set your ad height to this value
         
-        bannerView.loadAd()        
+        bannerView.loadAd()
     }
     
     func updateUI(_ loading:Bool,_ msg:String){
@@ -87,39 +89,40 @@ class MaxBannerVC: BaseUIViewController {
 }
 
 extension MaxBannerVC:MAAdViewAdDelegate{
+    
     func didExpand(_ ad: MAAd) {
-        print("didExpand")
+        print("\(TAG) didExpand")
     }
     
     func didCollapse(_ ad: MAAd) {
-        print("didCollapse")
+        print("\(TAG) didCollapse")
     }
     
     func didLoad(_ ad: MAAd) {
-        print("didLoad")
+        print("\(TAG) didLoad")
         updateUI(false, NSLocalizedString("load_success", comment: ""))
     }
     
     func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
         let msg="\(error.code): \(error.description)"
-        print("didFailToLoadAd: \(msg)")
+        print("\(TAG) didFailToLoadAd: \(msg)")
         updateUI(false, String(format: NSLocalizedString("load_failed", comment: ""), msg))
     }
     
     func didDisplay(_ ad: MAAd) {
-        print("display")
+        print("\(TAG) didDisplay")
     }
     
     func didHide(_ ad: MAAd) {
-        print("hide")
+        print("\(TAG) didHide")
     }
     
     func didClick(_ ad: MAAd) {
-        print("click")
+        print("\(TAG) didClick")
     }
     
     func didFail(toDisplay ad: MAAd, withError error: MAError) {
-        print("\(error.code) \(error.description)")
+        print("\(TAG) didFail: \(error.code) \(error.description)")
     }
     
     

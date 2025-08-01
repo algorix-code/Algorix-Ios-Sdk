@@ -11,6 +11,8 @@ import GoogleMobileAds
 
 class AdmobBannerVC: BaseUIViewController {
     
+    private let TAG = "Admob-banner:"
+    
     private var label:UILabel!
 
     private var isLoading:Bool=false
@@ -80,30 +82,34 @@ class AdmobBannerVC: BaseUIViewController {
 
 extension AdmobBannerVC: BannerViewDelegate {
     func bannerViewDidReceiveAd(_ bannerView: BannerView) {
-        NSLog("bannerViewDidReceiveAd")
+        print("\(TAG) bannerViewDidReceiveAd")
         updateUI(false, NSLocalizedString("load_success", comment: ""))
     }
 
     func bannerView(_ bannerView: BannerView, didFailToReceiveAdWithError error: Error) {
         let error1 = error as NSError
         let msg = "\(error1.code): \(error1.localizedDescription)"
-        NSLog("bannerView:didFailToReceiveAdWithError: \(msg)")
+        print("\(TAG) bannerView: error: \(msg)")
         updateUI(false, String(format: NSLocalizedString("load_failed", comment: ""), msg))
     }
 
     func bannerViewDidRecordImpression(_ bannerView: BannerView) {
-        NSLog("bannerViewDidRecordImpression")
+        print("\(TAG) bannerViewDidRecordImpression")
+    }
+    
+    func bannerViewDidRecordClick(_ bannerView: BannerView) {
+        print("\(TAG) bannerViewDidRecordClick")
     }
 
     func bannerViewWillPresentScreen(_ bannerView: BannerView) {
-        NSLog("bannerViewWillPresentScreen")
+        print("\(TAG) bannerViewWillPresentScreen")
     }
 
     func bannerViewWillDismissScreen(_ bannerView: BannerView) {
-        NSLog("bannerViewWillDIsmissScreen")
+        print("\(TAG) bannerViewWillDIsmissScreen")
     }
 
     func bannerViewDidDismissScreen(_ bannerView: BannerView) {
-        NSLog("bannerViewDidDismissScreen")
+        print("\(TAG) bannerViewDidDismissScreen")
     }
 }

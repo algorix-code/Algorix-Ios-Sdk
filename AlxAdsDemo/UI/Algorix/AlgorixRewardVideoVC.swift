@@ -9,6 +9,8 @@ import UIKit
 import AlxAds
 
 class AlgorixRewardVideoVC: BaseUIViewController {
+    
+    private let TAG = "Algorix-rewardVideo:"
 
     private var rewardAd:AlxRewardVideoAd!
     
@@ -81,7 +83,7 @@ class AlgorixRewardVideoVC: BaseUIViewController {
 extension AlgorixRewardVideoVC:AlxRewardVideoAdDelegate{
     
     func rewardVideoAdLoad(_ ad: AlxRewardVideoAd) {
-        NSLog("rewardVideoAdLoad")
+        print("\(TAG) rewardVideoAdLoad")
         self.isLoading=false
         self.label.text=NSLocalizedString("load_success", comment: "")
     }
@@ -89,38 +91,38 @@ extension AlgorixRewardVideoVC:AlxRewardVideoAdDelegate{
     func rewardVideoAdFailToLoad(_ ad: AlxRewardVideoAd, didFailWithError error: Error) {
         let error1=error as NSError
         let msg="\(error1.code): \(error1.localizedDescription)"
-        NSLog("rewardVideoAdFailToLoad: \(msg)")
+        print("\(TAG) rewardVideoAdFailToLoad: \(msg)")
         
         self.isLoading=false
         self.label.text=String(format: NSLocalizedString("load_failed", comment: ""), msg)
     }
     
     func rewardVideoAdImpression(_ ad: AlxRewardVideoAd) {
-        NSLog("rewardVideoAdImpression")
+        print("\(TAG) rewardVideoAdImpression")
     }
     
     func rewardVideoAdClick(_ ad: AlxRewardVideoAd) {
-        NSLog("rewardVideoAdClick")
+        print("\(TAG) rewardVideoAdClick")
     }
     
     func rewardVideoAdClose(_ ad: AlxRewardVideoAd) {
-        NSLog("rewardVideoAdClose")
+        print("\(TAG) rewardVideoAdClose")
     }
     
     func rewardVideoAdPlayStart(_ ad:AlxRewardVideoAd) {
-        NSLog("rewardVideoAdPlayStart")
+        print("\(TAG) rewardVideoAdPlayStart")
     }
     
     func rewardVideoAdPlayEnd(_ ad: AlxRewardVideoAd) {
-        NSLog("rewardVideoAdPlayEnd")
+        print("\(TAG) rewardVideoAdPlayEnd")
     }
     
     func rewardVideoAdReward(_ ad: AlxRewardVideoAd) {
-        NSLog("rewardVideoAdReward")
+        print("\(TAG) rewardVideoAdReward")
     }
     
     func rewardVideoAdPlayFail(_ ad: AlxRewardVideoAd, didFailWithError error: Error) {
-        NSLog("rewardVideoAdPlayFail \(error.localizedDescription)")
+        print("\(TAG) rewardVideoAdPlayFail \(error.localizedDescription)")
     }
     
         

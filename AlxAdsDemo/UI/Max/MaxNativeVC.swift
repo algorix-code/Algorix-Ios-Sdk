@@ -9,6 +9,8 @@ import UIKit
 import AppLovinSDK
 
 class MaxNativeVC: BaseUIViewController {
+    
+    private let TAG = "Max-native:"
 
     private var label:UILabel!
 
@@ -106,6 +108,7 @@ class MaxNativeVC: BaseUIViewController {
 extension MaxNativeVC:MANativeAdDelegate{
     
     func didLoadNativeAd(_ nativeAdView: MANativeAdView?, for ad: MAAd) {
+        print("\(TAG) didLoadNativeAd")
         updateUI(false, NSLocalizedString("load_success", comment: ""))
         
         if let currentNativeAd=nativeAd{
@@ -117,18 +120,18 @@ extension MaxNativeVC:MANativeAdDelegate{
         if let nativeAdView=nativeAdView{
             renderAdTemplatesUI(nativeAdView)
         }else{
-            print("no template ui")
+            print("\(TAG) no template ui")
         }
     }
     
     func didFailToLoadNativeAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
         let msg="\(error.code): \(error.description)"
-        print("didFailToLoadAd: \(msg)")
+        print("\(TAG) didFailToLoadNativeAd: \(msg)")
         updateUI(false, String(format: NSLocalizedString("load_failed", comment: ""), msg))
     }
     
     func didClickNativeAd(_ ad: MAAd) {
-        print("click")
+        print("\(TAG) didClickNativeAd")
     }
     
     

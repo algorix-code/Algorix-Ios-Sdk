@@ -9,6 +9,8 @@ import UIKit
 import AlxAds
 
 class AlgorixInterstitialVC: BaseUIViewController {
+    
+    private let TAG = "Algorix-interstitial:"
 
     private var interstitialAd:AlxInterstitialAd!
     
@@ -84,7 +86,7 @@ extension AlgorixInterstitialVC:AlxInterstitialAdDelegate {
     
     
     func interstitialAdLoad(_ ad: AlxInterstitialAd) {
-        NSLog("interstitialAdLoaded。price: \(ad.getPrice())")
+        print("\(TAG) interstitialAdLoaded: price:\(ad.getPrice())")
         self.isLoading=false
         self.label.text=NSLocalizedString("load_success", comment: "")
         
@@ -95,33 +97,33 @@ extension AlgorixInterstitialVC:AlxInterstitialAdDelegate {
     func interstitialAdFailToLoad(_ ad: AlxInterstitialAd, didFailWithError error: Error) {
         let error1=error as NSError
         let msg="\(error1.code): \(error1.localizedDescription)"
-        NSLog("interstitialAdFailedToLoad: \(msg)")
+        print("\(TAG) interstitialAdFailedToLoad: \(msg)")
         self.isLoading=false
         self.label.text=String(format: NSLocalizedString("load_failed", comment: ""), msg)
     }
     
     func interstitialAdImpression(_ ad: AlxInterstitialAd) {
-        NSLog("interstitialAdImpression")
+        print("\(TAG) interstitialAdImpression")
     }
     
     func interstitialAdClick(_ ad: AlxInterstitialAd) {
-        NSLog("interstitialAdClick")
+        print("\(TAG) interstitialAdClick")
     }
     
     func interstitialAdClose(_ ad: AlxInterstitialAd) {
-        NSLog("interstitialAdClose")
+        print("\(TAG) interstitialAdClose")
     }
     
     func interstitialAdRenderFail(_ ad: AlxInterstitialAd, didFailWithError error: Error) {
-        NSLog("interstitialAdRenderFailed: \(error.localizedDescription)")
+        print("\(TAG) interstitialAdRenderFailed: \(error.localizedDescription)")
     }
     
     func interstitialAdVideoStart(_ ad: AlxInterstitialAd) {
-        NSLog("interstitialAdVideoStart")
+        print("\(TAG) interstitialAdVideoStart")
     }
     
     func interstitialAdVideoEnd(_ ad: AlxInterstitialAd) {
-        NSLog("interstitialAdVideoEnd")
+        print("\(TAG) interstitialAdVideoEnd")
     }
    
 }

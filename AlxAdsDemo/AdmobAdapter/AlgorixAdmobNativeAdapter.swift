@@ -75,6 +75,7 @@ public class AlgorixAdmobNativeAdapter: AlgorixAdmobBaseAdapter,MediationNativeA
             return
         }
         
+        NSLog("%@: loadNativeAd unitid=%@",AlgorixAdmobNativeAdapter.TAG,adId)
         self.completionHandler = completionHandler
         
         // load ad

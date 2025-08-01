@@ -8,6 +8,9 @@ import UIKit
 import AlxAds
 
 class AlgorixBannerXibVC: BaseUIViewController{
+    
+    private let TAG = "Algorix-banner:"
+    
     @IBOutlet weak var bnLoadAndShow: UIButton!
     
     @IBOutlet weak var label: UILabel!
@@ -69,9 +72,9 @@ class AlgorixBannerXibVC: BaseUIViewController{
 extension AlgorixBannerXibVC:AlxBannerViewAdDelegate {    
     
     func bannerViewAdLoad(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdLoad。 price: \(bannerView.getPrice())")
+        print("\(TAG) bannerViewAdLoad: price: \(bannerView.getPrice())")
         bannerView.reportBiddingUrl()
-        bannerView.reportChargingUrl()        
+        bannerView.reportChargingUrl()
         
         self.isLoading=false
         self.label.text=NSLocalizedString("load_success", comment: "")
@@ -80,22 +83,22 @@ extension AlgorixBannerXibVC:AlxBannerViewAdDelegate {
     func bannerViewAdFailToLoad(_ bannerView: AlxBannerAdView, didFailWithError error: Error){
         let error1=error as NSError
         let msg="\(error1.code): \(error1.localizedDescription)"
-        print("bannerViewAdFailToLoad: \(msg)")
+        print("\(TAG) bannerViewAdFailToLoad: \(msg)")
         
         self.isLoading=false
         self.label.text=String(format: NSLocalizedString("load_failed", comment: ""), msg)
     }
     
     func bannerViewAdImpression(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdImpression")
+        print("\(TAG) bannerViewAdImpression")
     }
     
     func bannerViewAdClick(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdClick")
+        print("\(TAG) bannerViewAdClick")
     }
     
     func bannerViewAdClose(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdClose")
+        print("\(TAG) bannerViewAdClose")
     }
     
     

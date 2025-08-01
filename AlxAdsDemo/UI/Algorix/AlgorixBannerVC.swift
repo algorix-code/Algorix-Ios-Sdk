@@ -9,6 +9,8 @@ import UIKit
 import AlxAds
 
 class AlgorixBannerVC: BaseUIViewController{
+    
+    private let TAG = "Algorix-banner:"
 
     private var label:UILabel!
     
@@ -102,7 +104,7 @@ class AlgorixBannerVC: BaseUIViewController{
 //            adContainer.heightAnchor.constraint(equalToConstant: 50),
             
             bannerView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-//            bannerView.heightAnchor.constraint(equalToConstant: 100),
+//            bannerView.heightAnchor.constraint(equalToConstant: 100),        
         ])
         
     }
@@ -157,7 +159,7 @@ extension AlgorixBannerVC:AlxBannerViewAdDelegate {
     
     
     func bannerViewAdLoad(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdLoad。 price: \(bannerView.getPrice())")
+        print("\(TAG) bannerViewAdLoad: price: \(bannerView.getPrice())")
         bannerView.reportBiddingUrl()
         bannerView.reportChargingUrl()
         if isBanner2{
@@ -169,7 +171,7 @@ extension AlgorixBannerVC:AlxBannerViewAdDelegate {
     func bannerViewAdFailToLoad(_ bannerView: AlxBannerAdView, didFailWithError error: Error){
         let error1=error as NSError
         let msg="\(error1.code): \(error1.localizedDescription)"
-        print("bannerViewAdFailToLoad: \(msg)")
+        print("\(TAG) bannerViewAdFailToLoad: \(msg)")
         if isBanner2 {
             self.isLoading=false
             self.label.text=String(format: NSLocalizedString("load_failed", comment: ""), msg)
@@ -177,15 +179,15 @@ extension AlgorixBannerVC:AlxBannerViewAdDelegate {
     }
     
     func bannerViewAdImpression(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdImpression")
+        print("\(TAG) bannerViewAdImpression")
     }
     
     func bannerViewAdClick(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdClick")
+        print("\(TAG) bannerViewAdClick")
     }
     
     func bannerViewAdClose(_ bannerView: AlxBannerAdView) {
-        print("bannerViewAdClose")
+        print("\(TAG) bannerViewAdClose")
         if isBanner2{
             clearSubView(adContainer)
         }
