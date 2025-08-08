@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 /**
  原生广告
@@ -24,10 +25,10 @@ import Foundation
         super.init()
     }
     
-//   广告素材类型【如：1:大图、2:小图、3:组图、4:视频、0:未知类型】
+    //   广告素材类型【如：1:大图、2:小图、3:组图、4:视频、0:未知类型】
     @objc public internal(set) var createType:Int = 0
-
-//   广告来源
+    
+    //   广告来源
     @objc public internal(set) var adSource:String?
     
     @objc public internal(set) var title:String?
@@ -36,18 +37,18 @@ import Foundation
     
     @objc public internal(set) var icon:AlxNativeAdImage?
     
-//   广告内容多图素材
+    //   广告内容多图素材
     @objc public internal(set) var images:[AlxNativeAdImage]?
     
-//   广告行为按钮的显示文字（例如："查看详情"或"下载"）
+    //   广告行为按钮的显示文字（例如："查看详情"或"下载"）
     @objc public internal(set) var callToAction:String?
     
-//   广告多媒体内容信息
+    //   广告多媒体内容信息
     @objc public internal(set) var mediaContent:AlxMediaContent?
     
     @objc public weak var rootViewController:UIViewController?
     
-    @objc public weak var delegate:(any AlxNativeAdDelegate)?
+    @objc public weak var delegate:AlxNativeAdDelegate?
     
     @objc public func registerView(container:UIView,clickableViews:[UIView]?){
         self.registerView(container: container, clickableViews: clickableViews, closeView: nil)
@@ -61,10 +62,9 @@ import Foundation
         
     }
     
-//  Algorix logo
-//    @objc public internal(set) var adLogo:UIImage?
+    //  Algorix logo
     @objc public var adLogo:UIImage?{
-        get { nativeAdAction?.getAdLogo() }
+        return nativeAdAction?.getAdLogo()
     }
     
     @objc public func getPrice() -> Double{

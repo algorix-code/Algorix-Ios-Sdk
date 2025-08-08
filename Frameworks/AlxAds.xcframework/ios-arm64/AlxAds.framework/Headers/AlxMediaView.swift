@@ -5,6 +5,7 @@
 //  Created by liu weile on 2025/5/6.
 //
 
+import Foundation
 import UIKit
 
 @IBDesignable

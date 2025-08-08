@@ -12,7 +12,7 @@ import UIKit
     
     private var model:AlxRewardVideoModel!
     
-    @objc public weak var delegate:(any AlxRewardVideoAdDelegate)? {
+    @objc public weak var delegate:AlxRewardVideoAdDelegate? {
         get { model.delegate }
         set { model.delegate = newValue }
     }

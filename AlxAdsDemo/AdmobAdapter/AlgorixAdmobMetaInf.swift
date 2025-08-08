@@ -9,6 +9,6 @@ import Foundation
 
 @objc class AlgorixAdmobMetaInf: NSObject {
     
-    public static let ADAPTER_VERSION = "1.1.0"
+    public static let ADAPTER_VERSION = "1.2.0"
     
 }

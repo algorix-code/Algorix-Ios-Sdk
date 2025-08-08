@@ -154,5 +154,11 @@ public class AlgorixAdmobBaseAdapter: NSObject,MediationAdapter {
         data["adapter_version"] = AlgorixAdmobMetaInf.ADAPTER_VERSION
         AlxSdk.addExtraParameters(key:"alx_adapter",value:data)
     }
+    
+    public func error(code:Int,msg:String) -> NSError{
+        return NSError(domain: "AlgorixAdmobAdapter", code: code, userInfo: [NSLocalizedDescriptionKey : msg])
+    }
+    
+    
 
 }

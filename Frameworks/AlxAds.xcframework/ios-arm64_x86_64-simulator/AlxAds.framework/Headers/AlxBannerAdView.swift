@@ -5,12 +5,13 @@
 //  Created by liu weile on 2025/4/14.
 //
 
+import Foundation
 import UIKit
 
 @objc public class AlxBannerAdView: AlxBaseBannerView,AlxBannerViewDelegate,AlxAdDelegate {
-       
-        
-    @objc @IBOutlet public weak var delegate:(any AlxBannerViewAdDelegate)?
+    
+    
+    @objc @IBOutlet public weak var delegate:AlxBannerViewAdDelegate?
     /**
      此视图控制器用于在用户点击广告后呈现重叠式广告，通常应设置为包含AlxBannerAdView的视图控制器
      */
@@ -34,7 +35,7 @@ import UIKit
         get { bannerIsHideCloseIcon }
         set { bannerIsHideCloseIcon = newValue }
     }
-
+    
     @objc public override init(frame:CGRect) {
         super.init(frame: frame)
     }
@@ -91,5 +92,5 @@ import UIKit
     func bannerViewClose() {
         delegate?.bannerViewAdClose?(self)
     }
-
+    
 }

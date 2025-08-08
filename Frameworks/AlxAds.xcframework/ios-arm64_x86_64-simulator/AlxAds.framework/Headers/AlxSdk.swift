@@ -9,7 +9,7 @@ import Foundation
 
 @objc public class AlxSdk:NSObject {
     
-//    @objc public static let shared = AlxSdk()
+    //    @objc public static let shared = AlxSdk()
     
     private static var isInit = false
     
@@ -23,7 +23,7 @@ import Foundation
     }
     
     @objc public static func isSDKInit() -> Bool {
-       return isInit
+        return isInit
     }
     
     @objc public static func setDebug(_ debug:Bool) {

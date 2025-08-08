@@ -22,7 +22,7 @@ public class AlgorixAdmobInterstitialAdapter: AlgorixAdmobBaseAdapter,MediationI
         guard let params = AlgorixAdmobBaseAdapter.parseAdparameter(for: adConfiguration.credentials) else {
             let errorStr="The parameter field is not found in the adConfiguration object"
             NSLog("%@: config params is empty",AlgorixAdmobInterstitialAdapter.TAG)
-            self.delegate=completionHandler(nil,NSError(domain: errorStr, code: -100))
+            self.delegate=completionHandler(nil,self.error(code: -100,msg: errorStr))
             return
         }
         
@@ -33,7 +33,7 @@ public class AlgorixAdmobInterstitialAdapter: AlgorixAdmobBaseAdapter,MediationI
         guard let adId = params["unitid"] as? String,!adId.isEmpty else{
             let errorStr="unitid is empty in the parameter configuration"
             NSLog("%@: error: %@",AlgorixAdmobInterstitialAdapter.TAG,errorStr)
-            self.delegate=completionHandler(nil,NSError(domain: errorStr, code: -100))
+            self.delegate=completionHandler(nil,self.error(code: -100,msg: errorStr))
             return
         }
         

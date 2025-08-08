@@ -26,5 +26,5 @@ import Foundation
     @objc optional func rewardVideoAdReward(_ ad:AlxRewardVideoAd)
     
     @objc optional func rewardVideoAdPlayFail(_ ad:AlxRewardVideoAd,didFailWithError error:Error)
-
+    
 }

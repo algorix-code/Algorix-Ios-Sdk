@@ -60,7 +60,7 @@ public class AlgorixAdmobNativeAdapter: AlgorixAdmobBaseAdapter,MediationNativeA
         guard let params = AlgorixAdmobBaseAdapter.parseAdparameter(for: adConfiguration.credentials) else {
             let errorStr="The parameter field is not found in the adConfiguration object"
             NSLog("%@: config params is empty",AlgorixAdmobNativeAdapter.TAG)
-            self.delegate=completionHandler(nil,NSError(domain: errorStr, code: -100))
+            self.delegate=completionHandler(nil,self.error(code: -100,msg: errorStr))
             return
         }
         
@@ -71,7 +71,7 @@ public class AlgorixAdmobNativeAdapter: AlgorixAdmobBaseAdapter,MediationNativeA
         guard let adId = params["unitid"] as? String,!adId.isEmpty else{
             let errorStr="unitid is empty in the parameter configuration"
             NSLog("%@: error: %@",AlgorixAdmobNativeAdapter.TAG,errorStr)
-            self.delegate=completionHandler(nil,NSError(domain: errorStr, code: -100))
+            self.delegate=completionHandler(nil,self.error(code: -100,msg: errorStr))
             return
         }
         
@@ -119,7 +119,7 @@ public class AlgorixAdmobNativeAdapter: AlgorixAdmobBaseAdapter,MediationNativeA
     
     private func downloadImageAsync(_ urlString: String, completion: @escaping(Result<UIImage, NSError>) -> Void) {
         guard let url = URL(string: urlString) else {
-            completion(.failure(NSError(domain: "Image URL is invalid", code: -101)))
+            completion(.failure(self.error(code: -101,msg: "Image URL is invalid")))
             return
         }
         DispatchQueue.global().async {
@@ -129,11 +129,11 @@ public class AlgorixAdmobNativeAdapter: AlgorixAdmobBaseAdapter,MediationNativeA
                     if let image = UIImage(data:data) {
                         completion(.success(image))
                     } else {
-                        completion(.failure(NSError(domain: "Error while creating UIImage from received data", code: -102)))
+                        completion(.failure(self.error(code: -102,msg: "Error while creating UIImage from received data")))
                     }
                 }
             }catch{
-                completion(.failure(NSError(domain: error.localizedDescription, code: -103)))
+                completion(.failure(self.error(code: -103,msg: error.localizedDescription)))
             }
         }
     }
@@ -150,7 +150,7 @@ extension AlgorixAdmobNativeAdapter:AlxNativeAdLoaderDelegate{
             if let handler=self.completionHandler{
                 let errorStr="native ad data is empty"
                 NSLog("%@: native ad data is empty",AlgorixAdmobNativeAdapter.TAG)
-                self.delegate=handler(nil,NSError(domain: errorStr, code: -100))
+                self.delegate=handler(nil,self.error(code: -100,msg: errorStr))
             }
             return
         }

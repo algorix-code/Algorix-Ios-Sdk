@@ -11,13 +11,9 @@ import Foundation
     
     private var model:AlxInterstitialModel!
     
-    @objc public weak var delegate:(any AlxInterstitialAdDelegate)? {
-        get{
-            return model.delegate
-        }
-        set {
-            model.delegate = newValue
-        }
+    @objc public weak var delegate:AlxInterstitialAdDelegate? {
+        get { model.delegate }
+        set { model.delegate = newValue }
     }
     
     @objc public override init(){
