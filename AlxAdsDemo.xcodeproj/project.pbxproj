@@ -32,7 +32,6 @@
 		E3230FD12E45E1BD000A56C6 /* AlgorixAdmobNativeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3230FCE2E45E1BD000A56C6 /* AlgorixAdmobNativeAdapter.swift */; };
 		E3230FD22E45E1BD000A56C6 /* AlgorixAdmobMetaInf.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3230FCD2E45E1BD000A56C6 /* AlgorixAdmobMetaInf.swift */; };
 		E3230FD32E45E1BD000A56C6 /* AlgorixAdmobBannerAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3230FCA2E45E1BD000A56C6 /* AlgorixAdmobBannerAdapter.swift */; };
-		E3230FD42E45E1BD000A56C6 /* AlgorixAdmobRewardAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3230FCF2E45E1BD000A56C6 /* AlgorixAdmobRewardAdapter.swift */; };
 		E3230FD52E45E1BD000A56C6 /* AlgorixAdmobBaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3230FCB2E45E1BD000A56C6 /* AlgorixAdmobBaseAdapter.swift */; };
 		E336DFEE2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E336DFED2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift */; };
 		E33E7AC92DD4A0CB00C724B9 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33E7AC82DD4A0CB00C724B9 /* BaseUIViewController.swift */; };
@@ -46,6 +45,7 @@
 		E3EC006A2DD4933B00485DAF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E3EC00692DD4933B00485DAF /* Base */; };
 		E3EC006C2DD4933C00485DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3EC006B2DD4933C00485DAF /* Assets.xcassets */; };
 		E3EC006F2DD4933C00485DAF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E3EC006E2DD4933C00485DAF /* Base */; };
+		E3FF508C2E52F8BD000BDC28 /* AlgorixAdmobRewardVideoAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FF508B2E52F8BD000BDC28 /* AlgorixAdmobRewardVideoAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -91,7 +91,6 @@
 		E3230FCC2E45E1BD000A56C6 /* AlgorixAdmobInterstitialAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobInterstitialAdapter.swift; sourceTree = "<group>"; };
 		E3230FCD2E45E1BD000A56C6 /* AlgorixAdmobMetaInf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobMetaInf.swift; sourceTree = "<group>"; };
 		E3230FCE2E45E1BD000A56C6 /* AlgorixAdmobNativeAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobNativeAdapter.swift; sourceTree = "<group>"; };
-		E3230FCF2E45E1BD000A56C6 /* AlgorixAdmobRewardAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobRewardAdapter.swift; sourceTree = "<group>"; };
 		E336DFED2E1663C200B237C0 /* AlgorixMaxMediationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixMaxMediationAdapter.swift; sourceTree = "<group>"; };
 		E33E7AC82DD4A0CB00C724B9 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		E33E7ACA2DD4A0E900C724B9 /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		E3EC006E2DD4933C00485DAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3EC00702DD4933C00485DAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3EC007A2DD4980E00485DAF /* AlxAds.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AlxAds.xcframework; path = Frameworks/AlxAds.xcframework; sourceTree = "<group>"; };
+		E3FF508B2E52F8BD000BDC28 /* AlgorixAdmobRewardVideoAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorixAdmobRewardVideoAdapter.swift; sourceTree = "<group>"; };
 		E88B9962E29132041C782D02 /* Pods-AlxAdsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlxAdsDemo.release.xcconfig"; path = "Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EF81CDE6E5E47A94D03396C6 /* Pods_AlxAdsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlxAdsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE396B92C5072417E6A32193 /* Pods-AlxAdsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlxAdsDemo.debug.xcconfig"; path = "Target Support Files/Pods-AlxAdsDemo/Pods-AlxAdsDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				E3230FCC2E45E1BD000A56C6 /* AlgorixAdmobInterstitialAdapter.swift */,
 				E3230FCD2E45E1BD000A56C6 /* AlgorixAdmobMetaInf.swift */,
 				E3230FCE2E45E1BD000A56C6 /* AlgorixAdmobNativeAdapter.swift */,
-				E3230FCF2E45E1BD000A56C6 /* AlgorixAdmobRewardAdapter.swift */,
+				E3FF508B2E52F8BD000BDC28 /* AlgorixAdmobRewardVideoAdapter.swift */,
 			);
 			path = AdmobAdapter;
 			sourceTree = "<group>";
@@ -452,6 +452,7 @@
 				E33E7AEC2DD4AACF00C724B9 /* UIImageView+Extensions.swift in Sources */,
 				E308168E2E3C7372002E3112 /* AdmobBannerVC.swift in Sources */,
 				E308168F2E3C7372002E3112 /* AdmobMainVC.swift in Sources */,
+				E3FF508C2E52F8BD000BDC28 /* AlgorixAdmobRewardVideoAdapter.swift in Sources */,
 				E30816902E3C7372002E3112 /* AdmobInterstitialVC.swift in Sources */,
 				E30816912E3C7372002E3112 /* AdmobNativeVC.swift in Sources */,
 				E30816922E3C7372002E3112 /* AdmobRewardVideoVC.swift in Sources */,
@@ -469,7 +470,6 @@
 				E3230FD12E45E1BD000A56C6 /* AlgorixAdmobNativeAdapter.swift in Sources */,
 				E3230FD22E45E1BD000A56C6 /* AlgorixAdmobMetaInf.swift in Sources */,
 				E3230FD32E45E1BD000A56C6 /* AlgorixAdmobBannerAdapter.swift in Sources */,
-				E3230FD42E45E1BD000A56C6 /* AlgorixAdmobRewardAdapter.swift in Sources */,
 				E3230FD52E45E1BD000A56C6 /* AlgorixAdmobBaseAdapter.swift in Sources */,
 				E30816A82E3C73A3002E3112 /* AlgorixInterstitialVC.swift in Sources */,
 				E30816A92E3C73A3002E3112 /* AlgorixRewardVideoVC.swift in Sources */,
