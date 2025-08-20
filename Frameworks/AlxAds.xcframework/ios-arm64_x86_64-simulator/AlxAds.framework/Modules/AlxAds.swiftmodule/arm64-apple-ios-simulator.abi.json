@@ -8970,14 +8970,14 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxRequestParamsBean.swift",
       "kind": "IntegerLiteral",
-      "offset": 7742,
+      "offset": 7752,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxRequestParamsBean.swift",
       "kind": "IntegerLiteral",
-      "offset": 7794,
+      "offset": 7804,
       "length": 1,
       "value": "1"
     },
@@ -10540,7 +10540,7 @@
       "kind": "StringLiteral",
       "offset": 158,
       "length": 7,
-      "value": "\"1.4.0\""
+      "value": "\"1.5.0\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Config\/AlxConst.swift",
