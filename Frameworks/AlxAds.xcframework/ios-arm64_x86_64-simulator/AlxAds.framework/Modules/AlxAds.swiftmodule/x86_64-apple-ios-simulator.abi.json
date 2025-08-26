@@ -9063,7 +9063,7 @@
       "kind": "StringLiteral",
       "offset": 179,
       "length": 7,
-      "value": "\"1.4.8\""
+      "value": "\"1.5.6\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Util\/AlxFileUtil.swift",
@@ -10540,7 +10540,7 @@
       "kind": "StringLiteral",
       "offset": 158,
       "length": 7,
-      "value": "\"1.5.0\""
+      "value": "\"1.6.0\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Config\/AlxConst.swift",
