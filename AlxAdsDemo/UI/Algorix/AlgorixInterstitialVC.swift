@@ -22,7 +22,7 @@ class AlgorixInterstitialVC: BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationItem.title=NSLocalizedString("interstitial_ad", comment: "")
+        navigationItem.title=NSLocalizedString("interstitial_video_ad", comment: "")
         
         let bnLoad=createButton(title: NSLocalizedString("load_ad", comment: ""),  action: #selector(loadAd))
         view.addSubview(bnLoad)

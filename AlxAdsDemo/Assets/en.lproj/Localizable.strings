@@ -14,10 +14,13 @@
 "topOn_ad"="TopOn Ad";
 
 "banner_ad"="banner Ad";
-"interstitial_ad"="interstitial Ad - video";
+"interstitial_ad"="interstitial Ad";
+"interstitial_video_ad"="interstitial Ad - video";
 "interstitial_banner_ad"="interstitial Ad - banner";
 "rewardVideo_ad"="reward video Ad";
 "native_ad"="native Ad";
+"native_ad_template"="native Ad - template";
+"native_ad_self_render"="native Ad - self render";
 "banner_ad_preload"="banner Ad preload";
 "banner_ad_xib"="Load banner ads in Xib";
 
@@ -54,3 +57,4 @@
 "topOn_interstitial"="TopOn Ad: Interstitial";
 "topOn_rewardVideo"="TopOn Ad: RewardVideo";
 "topOn_native"="TopOn Ad: native";
+"topOn_native_self_render"="TopOn Ad: native - self render";

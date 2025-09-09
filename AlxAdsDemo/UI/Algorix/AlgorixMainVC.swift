@@ -41,7 +41,7 @@ class AlgorixMainVC: BaseUIViewController {
         bnReward=createButton(title: NSLocalizedString("rewardVideo_ad", comment: ""), action: #selector(buttonReward))
         contentView.addArrangedSubview(bnReward)
 
-        bnInterstitial=createButton(title: NSLocalizedString("interstitial_ad", comment: ""), action: #selector(buttonInterstitial))
+        bnInterstitial=createButton(title: NSLocalizedString("interstitial_video_ad", comment: ""), action: #selector(buttonInterstitial))
         contentView.addArrangedSubview(bnInterstitial)
         
         bnInterstitialBanner=createButton(title: NSLocalizedString("interstitial_banner_ad", comment: ""), action: #selector(buttonInterstitialBanner))

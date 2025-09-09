@@ -14,10 +14,13 @@
 "topOn_ad"="TopOn广告";
 
 "banner_ad"="banner广告";
-"interstitial_ad"="插屏-视频广告";
+"interstitial_ad"="插屏广告";
+"interstitial_video_ad"="插屏-视频广告";
 "interstitial_banner_ad"="插屏-banner广告";
 "rewardVideo_ad"="激励视频广告";
 "native_ad"="原生广告";
+"native_ad_template"="原生广告-模版";
+"native_ad_self_render"="原生广告-自渲染";
 "banner_ad_preload"="banner广告预加载";
 "banner_ad_xib"="Xib中加载banner广告";
 
@@ -54,3 +57,4 @@
 "topOn_interstitial"="TopOn广告: 插屏广告";
 "topOn_rewardVideo"="TopOn广告: 激励视频";
 "topOn_native"="TopOn广告: 原生广告";
+"topOn_native_self_render"="TopOn广告: 原生广告-自渲染";
