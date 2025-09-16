@@ -32,5 +32,12 @@ class AdConfig {
     static let Admob_Interstitial_Ad_Id="ca-app-pub-2258587227088809/1043955443"
     static let Admob_Native_Ad_Id="ca-app-pub-2258587227088809/1521316212"
     
+    static let TopOn_App_Key="a7a6d21ff1f85aaa0afc0cbbf0382d136"
+    static let TopOn_App_Id="h68a3e1eb59b60"
+    static let TopOn_Banner_Ad_Id="n68a3e434b3558"
+    static let TopOn_Reward_Video_Ad_Id="n68a3e4bb05907"
+    static let TopOn_Interstitial_Ad_Id="n68a3f5643a56d"
+    static let TopOn_Native_Ad_Id="n68a3f57229d3d"
+    
     
 }

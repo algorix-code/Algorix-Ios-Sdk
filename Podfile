@@ -12,6 +12,8 @@ target 'AlxAdsDemo' do
    pod 'AppLovinSDK', '13.3.0'
   # google admob 广告sdk
    pod 'Google-Mobile-Ads-SDK', '12.6.0'
+  # TopOn 广告sdk
+   pod 'TPNiOS','6.4.87'
    
 end
 

@@ -38,6 +38,9 @@ class MainVC: BaseUIViewController{
         let bnAdmob=createButton(title: NSLocalizedString("admob_ad", comment: ""), action: #selector(bnAdmob))
         contentView.addArrangedSubview(bnAdmob)
         
+        let bnTopOn=createButton(title: NSLocalizedString("topOn_ad", comment: ""), action: #selector(bnTopOn))
+        contentView.addArrangedSubview(bnTopOn)
+        
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -59,6 +62,9 @@ class MainVC: BaseUIViewController{
             
             bnAdmob.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnAdmob.heightAnchor.constraint(equalToConstant: 50),
+            
+            bnTopOn.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            bnTopOn.heightAnchor.constraint(equalToConstant: 50),
             
         ])
         
@@ -118,6 +124,10 @@ class MainVC: BaseUIViewController{
     
     @objc func bnAdmob(){
         self.navigationController?.pushViewController(AdmobMainVC(), animated: false)
+    }
+    
+    @objc func bnTopOn(){
+        self.navigationController?.pushViewController(TopOnMainVC(), animated: false)
     }
     
     
