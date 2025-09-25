@@ -104,7 +104,7 @@ class AlgorixBannerVC: BaseUIViewController{
 //            adContainer.heightAnchor.constraint(equalToConstant: 50),
             
             bannerView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-//            bannerView.heightAnchor.constraint(equalToConstant: 100),        
+//            bannerView.heightAnchor.constraint(equalToConstant: 100),
         ])
         
     }
@@ -151,6 +151,20 @@ class AlgorixBannerVC: BaseUIViewController{
         bannerView.rootViewController=self
         bannerView.isHideClose = false
         bannerView.loadAd(adUnitId: AdConfig.Alx_Banner_Ad_Id)
+    }
+    
+    //视图将要消失【生命周期】
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("\(TAG) viewWillDisappear")
+        bannerView.destroy()
+        bannerView2?.destroy()
+    }
+    
+    //视图已经消失【生命周期】
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("\(TAG) viewDidDisappear")
     }
 
 }

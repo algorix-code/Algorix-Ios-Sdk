@@ -41,6 +41,19 @@ class AlgorixBannerXibVC: BaseUIViewController{
         setupLayout()
     }
     
+    //视图将要消失【生命周期】
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("\(TAG) viewWillDisappear")
+        bannerView.destroy()
+    }
+    
+    //视图已经消失【生命周期】
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("\(TAG) viewDidDisappear")
+    }
+    
     private func setupLayout() {
         bnLoadAndShow.setTitle(NSLocalizedString("load_and_show_ad", comment: ""), for: .normal)
         bnLoadAndShow.setTitleColor(.white, for: .normal)
@@ -69,7 +82,7 @@ class AlgorixBannerXibVC: BaseUIViewController{
     
 }
 
-extension AlgorixBannerXibVC:AlxBannerViewAdDelegate {    
+extension AlgorixBannerXibVC:AlxBannerViewAdDelegate {
     
     func bannerViewAdLoad(_ bannerView: AlxBannerAdView) {
         print("\(TAG) bannerViewAdLoad: price: \(bannerView.getPrice())")
