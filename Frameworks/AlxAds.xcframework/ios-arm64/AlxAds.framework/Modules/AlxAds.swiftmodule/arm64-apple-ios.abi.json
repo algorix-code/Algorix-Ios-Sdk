@@ -965,8 +965,18 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
@@ -985,13 +995,10 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
-        "moduleName": "AlxAds",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "AlxAds"
       },
       {
         "kind": "Import",
@@ -1089,6 +1096,13 @@
         "kind": "Import",
         "name": "CoreTelephony",
         "printedName": "CoreTelephony",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds"
       },
@@ -2390,8 +2404,15 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
@@ -2407,6 +2428,30 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AlxAds",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
       },
       {
         "kind": "Import",
@@ -2437,8 +2482,18 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
@@ -2454,6 +2509,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
       },
       {
         "kind": "Import",
@@ -2528,8 +2590,8 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
@@ -2548,8 +2610,8 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
@@ -2648,6 +2710,13 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
           "RawDocComment"
@@ -2657,6 +2726,13 @@
         "kind": "Import",
         "name": "StoreKit",
         "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds"
       },
@@ -2674,6 +2750,13 @@
         "kind": "Import",
         "name": "StoreKit",
         "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds"
       },
@@ -2703,8 +2786,15 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AlxAds",
         "declAttributes": [
@@ -5780,6 +5870,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "AlxAds"
       },
       {
         "kind": "TypeDecl",
@@ -8984,14 +9081,14 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/AlxRewardVideoModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 296,
+      "offset": 314,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/AlxRewardVideoModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 333,
+      "offset": 351,
       "length": 5,
       "value": "false"
     },
@@ -9404,28 +9501,28 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/AlxBannerModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 358,
+      "offset": 376,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/AlxBannerModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 395,
+      "offset": 413,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/AlxInterstitialModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 311,
+      "offset": 329,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/AlxInterstitialModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 348,
+      "offset": 366,
       "length": 5,
       "value": "false"
     },
@@ -9453,28 +9550,28 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Vast\/AlxVastInline.swift",
       "kind": "Dictionary",
-      "offset": 2547,
+      "offset": 2552,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxBannerUIData.swift",
       "kind": "IntegerLiteral",
-      "offset": 182,
+      "offset": 200,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxBannerUIData.swift",
       "kind": "IntegerLiteral",
-      "offset": 229,
+      "offset": 247,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxBannerUIData.swift",
       "kind": "IntegerLiteral",
-      "offset": 335,
+      "offset": 353,
       "length": 1,
       "value": "0"
     },
@@ -9530,7 +9627,7 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Vast\/AlxVideoVastBean.swift",
       "kind": "StringLiteral",
-      "offset": 506,
+      "offset": 511,
       "length": 2,
       "value": "\"\""
     },
@@ -9670,14 +9767,14 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/SKAdNetwork\/AlxSKOverlayManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 638,
+      "offset": 656,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Data\/Vast\/AlxVastWrapper.swift",
       "kind": "Dictionary",
-      "offset": 2316,
+      "offset": 2321,
       "length": 3,
       "value": "[]"
     },

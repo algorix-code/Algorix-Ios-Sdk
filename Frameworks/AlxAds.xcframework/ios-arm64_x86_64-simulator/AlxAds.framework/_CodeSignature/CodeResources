@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/AlxInterstitialAd.swift</key>
 		<data>
-		O6bdMgPJ58N2wVYmOesBB3i4dXE=
+		hDSavu2eSyiRItjNB0DmTvi5D4U=
 		</data>
 		<key>Headers/AlxInterstitialAdDelegate.swift</key>
 		<data>
@@ -90,7 +90,7 @@
 		</data>
 		<key>Modules/AlxAds.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		iFLo4JX6mEB17dxmv5LjIy6vP+8=
+		hMJ7QHEzdAVZc0I7z5V2A26UCR0=
 		</data>
 		<key>Modules/AlxAds.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -106,11 +106,11 @@
 		</data>
 		<key>Modules/AlxAds.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		1qRjDCOEMP55gNIwFXr61wS+YIQ=
+		3DFM8CiImz984u2uvqelvxnNGwY=
 		</data>
 		<key>Modules/AlxAds.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		iFLo4JX6mEB17dxmv5LjIy6vP+8=
+		hMJ7QHEzdAVZc0I7z5V2A26UCR0=
 		</data>
 		<key>Modules/AlxAds.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -126,7 +126,7 @@
 		</data>
 		<key>Modules/AlxAds.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LWHtFAnJ7gvj7LBW/0Hsj50jCW0=
+		EhXZwf62s4rGAE/jrEx8DOw2ETE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -214,7 +214,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+IkmTDA1Tm7xvFcUtuTFdSe2The0TvLtBYiN3O5Y/pI=
+			/sgMiVpa9/GhV6GCiBOkcosJUqaJXMBRJv4HVL9nMDE=
 			</data>
 		</dict>
 		<key>Headers/AlxInterstitialAdDelegate.swift</key>
@@ -305,7 +305,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6/h/D7ToMiR62M/E9ArwmQwEIFOR4t/cdGy3QM/hFF0=
+			Jpy3Uz6Nz7Hk7o6fvxS/1z+bEOKW3uVVDrteSTJLxV8=
 			</data>
 		</dict>
 		<key>Modules/AlxAds.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -333,14 +333,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GZQrI9QKkUZUuoQNdCyE4TZlXeauAgloY84q9A/Xy5w=
+			2KQ6Acx4VUl3MRW0e7nSACzXuiXt/3mj0zSoYl25VIk=
 			</data>
 		</dict>
 		<key>Modules/AlxAds.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6/h/D7ToMiR62M/E9ArwmQwEIFOR4t/cdGy3QM/hFF0=
+			Jpy3Uz6Nz7Hk7o6fvxS/1z+bEOKW3uVVDrteSTJLxV8=
 			</data>
 		</dict>
 		<key>Modules/AlxAds.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -368,7 +368,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wLGN1xI38z9KspNeKv0Z/Jbyi+5nVR5/T0SdmCdw3SY=
+			kK+kzMpxCz3OGGSeGLGysRaRv5bIXoel9jGL6gedhtg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
