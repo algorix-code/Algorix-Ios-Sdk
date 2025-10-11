@@ -9109,7 +9109,7 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Models\/NativeAd\/AlxNativeAdImpl.swift",
       "kind": "BooleanLiteral",
-      "offset": 9133,
+      "offset": 9186,
       "length": 5,
       "value": "false"
     },
@@ -9161,6 +9161,13 @@
       "offset": 179,
       "length": 7,
       "value": "\"1.5.6\""
+    },
+    {
+      "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/OmSdk\/OmConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 220,
+      "length": 21,
+      "value": "\"iabtechlab.com-omid\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/Android\/ads-ios-sdk-2025\/AlxAds\/Util\/AlxFileUtil.swift",
