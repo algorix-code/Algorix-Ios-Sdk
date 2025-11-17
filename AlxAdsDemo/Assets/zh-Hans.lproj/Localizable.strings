@@ -7,7 +7,7 @@
 */
 "ad_list"="广告列表";
 
-"algorix_ad"="Algorix广告";
+"alx_ad"="Alx广告";
 "admob_ad"="Admob广告";
 "max_ad"="Max广告";
 "ironSource_ad"="IronSource广告";
@@ -32,11 +32,11 @@
 "load_success"="加载成功";
 "load_failed"="加载失败:%@";
 
-"algorix_banner"="Algorix广告: Banner";
-"algorix_interstitial"="Algorix广告: 插屏广告";
-"algorix_interstitial_banner"="Algorix广告: 插屏广告-banner";
-"algorix_rewardVideo"="Algorix广告: 激励视频";
-"algorix_native"="Algorix广告: 原生广告";
+"alx_banner"="Alx广告: Banner";
+"alx_interstitial"="Alx广告: 插屏广告";
+"alx_interstitial_banner"="Alx广告: 插屏广告-banner";
+"alx_rewardVideo"="Alx广告: 激励视频";
+"alx_native"="Alx广告: 原生广告";
 
 "admob_banner"="Admob广告: Banner";
 "admob_interstitial"="Admob广告: 插屏广告";

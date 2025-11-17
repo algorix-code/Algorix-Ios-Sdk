@@ -8,7 +8,6 @@
 import UIKit
 import AppTrackingTransparency
 import AdSupport
-import AlxDevelop
 
 class MainVC: BaseUIViewController{
 
@@ -68,7 +67,6 @@ class MainVC: BaseUIViewController{
             
             bnTopOn.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnTopOn.heightAnchor.constraint(equalToConstant: 50),
-            
         ])
         
     }

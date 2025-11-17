@@ -90,7 +90,7 @@ class AlxMainVC: BaseUIViewController {
     
     @objc func buttonBannerXib(){
         navigationController?.pushViewController(AlxBannerXibVC(), animated: false)
-//        navigationController?.pushViewController(AlgorixBannerXibVC(nibName: "AlgorixBannerXibVC", bundle: nil), animated: false)
+//        navigationController?.pushViewController(AlxBannerXibVC(nibName: "AlxBannerXibVC", bundle: nil), animated: false)
     }
 
     @objc func buttonReward(){

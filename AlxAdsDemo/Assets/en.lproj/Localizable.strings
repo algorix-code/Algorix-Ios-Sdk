@@ -7,7 +7,7 @@
 */
 "ad_list"="ad list";
 
-"algorix_ad"="Algorix Ad";
+"alx_ad"="Alx Ad";
 "admob_ad"="Admob Ad";
 "max_ad"="Max Ad";
 "ironSource_ad"="IronSource Ad";
@@ -32,11 +32,11 @@
 "load_success"="load success";
 "load_failed"="load failed: %@";
 
-"algorix_banner"="Algorix Ad: Banner";
-"algorix_interstitial"="Algorix Ad: Interstitial";
-"algorix_interstitial_banner"="Algorix Ad: Interstitial-banner";
-"algorix_rewardVideo"="Algorix Ad: RewardVideo";
-"algorix_native"="Algorix Ad: native";
+"alx_banner"="Alx Ad: Banner";
+"alx_interstitial"="Alx Ad: Interstitial";
+"alx_interstitial_banner"="Alx Ad: Interstitial-banner";
+"alx_rewardVideo"="Alx Ad: RewardVideo";
+"alx_native"="Alx Ad: native";
 
 "admob_banner"="Admob Ad: Banner";
 "admob_interstitial"="Admob Ad: Interstitial";
