@@ -44,6 +44,12 @@ class MainVC: BaseUIViewController{
         let bnTopOn=createButton(title: NSLocalizedString("topOn_ad", comment: ""), action: #selector(bnTopOn))
         contentView.addArrangedSubview(bnTopOn)
         
+        let bnTest=createButton(title: "Test内部开发专用", action: #selector(bnTest))
+        contentView.addArrangedSubview(bnTest)
+        
+        let bnDev=createButton(title: "Dev内部开发专用", action: #selector(bnDev))
+        contentView.addArrangedSubview(bnDev)
+        
         
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -69,6 +75,11 @@ class MainVC: BaseUIViewController{
             bnTopOn.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             bnTopOn.heightAnchor.constraint(equalToConstant: 50),
             
+            bnTest.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            bnTest.heightAnchor.constraint(equalToConstant: 50),
+            
+            bnDev.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            bnDev.heightAnchor.constraint(equalToConstant: 50),
         ])
         
     }
@@ -136,6 +147,15 @@ class MainVC: BaseUIViewController{
     @objc func bnTopOn(){
         self.navigationController?.pushViewController(TopOnMainVC(), animated: false)
     }
+    
+    @objc func bnTest(){
+        self.navigationController?.pushViewController(TestMainVC(), animated: false)
+    }
+    
+    @objc func bnDev(){
+        self.navigationController?.pushViewController(DevMainVC(), animated: false)
+    }
+    
     
     
 
