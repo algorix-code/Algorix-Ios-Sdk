@@ -9,14 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
-//【注意：】在.h文件中不要用双引号，否则会引起编译错误，应为尖括号包裹的头文件路径。但是在.m文件中可以用双引号。因为.h文件是向外公开的，.m文件不向外公开
-//#import "OmAdType.h"
-//#import "OmFriendlyType.h"
-// 在.h文件中推荐用尖括号import，不要用双引号import
+
 #import <AlxAds/OmAdType.h>
 #import <AlxAds/OmFriendlyType.h>
 
-// 前向声明
+
 @class AlxOmidBean;
 
 
