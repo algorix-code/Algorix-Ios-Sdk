@@ -12,7 +12,7 @@
 
 #import <AlxAds/OmAdType.h>
 
-// 假设你有这些类（如果是 Swift 类，需确保它们对 OC 可见）
+
 @class AlxOmidBean;
 
 

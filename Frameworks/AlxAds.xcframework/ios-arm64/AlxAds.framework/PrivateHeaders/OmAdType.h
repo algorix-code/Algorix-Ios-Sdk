@@ -5,8 +5,6 @@
 //  Created by liu weile on 2025/11/25.
 //
 
-// OmAdType.h
-
 #import <Foundation/Foundation.h>
 
 
