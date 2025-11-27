@@ -62,7 +62,7 @@ import UIKit
         
     }
     
-    //  Algorix logo
+    //  Alx logo
     @objc public var adLogo:UIImage?{
         return nativeAdAction?.getAdLogo()
     }
