@@ -1,15 +1,9 @@
-//
-//  module.modulemap
-//  AlxAds
-//
-//  Created by liu weile on 2025/4/10.
-//
-
 framework module AlxAds {
     
     umbrella header "AlxAds.h"
    
     export *
+    module * { export * }
    
     module Internal {
         header "OmAdSafe.h"
