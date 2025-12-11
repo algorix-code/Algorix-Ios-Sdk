@@ -11056,14 +11056,14 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/iOS\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxRequestParamsBean.swift",
       "kind": "IntegerLiteral",
-      "offset": 7746,
+      "offset": 7738,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/iOS\/ads-ios-sdk-2025\/AlxAds\/Data\/Entity\/AlxRequestParamsBean.swift",
       "kind": "IntegerLiteral",
-      "offset": 7798,
+      "offset": 7790,
       "length": 1,
       "value": "1"
     },
@@ -11819,7 +11819,7 @@
     {
       "filePath": "\/Users\/liuweile\/Desktop\/iOS\/ads-ios-sdk-2025\/AlxAds\/SKAdNetwork\/AlxSKOverlayManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 656,
+      "offset": 589,
       "length": 1,
       "value": "5"
     },
@@ -12963,13 +12963,6 @@
       "offset": 449,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/liuweile\/Desktop\/iOS\/ads-ios-sdk-2025\/AlxAds\/Bus\/AlxAdClickAction.swift",
-      "kind": "StringLiteral",
-      "offset": 298,
-      "length": 15,
-      "value": "\"items-apps:\/\/\""
     },
     {
       "filePath": "\/Users\/liuweile\/Desktop\/iOS\/ads-ios-sdk-2025\/AlxAds\/Api\/AlxSdk.swift",
