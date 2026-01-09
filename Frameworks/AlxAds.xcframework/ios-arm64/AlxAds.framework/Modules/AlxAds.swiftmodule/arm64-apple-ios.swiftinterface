@@ -5,12 +5,14 @@
 import AVFoundation
 import AdSupport
 @_exported import AlxAds
+import AppTrackingTransparency
 import CommonCrypto
 import CoreLocation
 import CoreTelephony
 import DeveloperToolsSupport
 import Foundation
 import Network
+import Security
 import StoreKit
 import Swift
 import SwiftUI
@@ -20,6 +22,8 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import os.log
+import os
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency public class AlxBaseAdView : UIKit.UIView {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder: Foundation.NSCoder)
@@ -108,6 +112,14 @@ import _SwiftConcurrencyShims
   @objc deinit
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AlxUserAgentService : ObjectiveC.NSObject {
+  public static let shared: AlxAds.AlxUserAgentService
+  public var userAgent: Swift.String {
+    get
+  }
+  public func fetchUserAgent(completion: ((Swift.String) -> Swift.Void)? = nil)
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class AlxNativeAd : ObjectiveC.NSObject, AlxAds.AlxAdDelegate {
   @objc public static let Create_Type_Unknown: Swift.Int
@@ -280,6 +292,14 @@ import _SwiftConcurrencyShims
 }
 @_inheritsConvenienceInitializers @objc public class AlxAdRequest : ObjectiveC.NSObject {
   @objc override dynamic public init()
+  @objc deinit
+}
+@objc final public class AlxAtomicBoolean : ObjectiveC.NSObject {
+  @objc public init(initialValue: Swift.Bool)
+  @objc final public func getAndSet(_ newValue: Swift.Bool) -> Swift.Bool
+  @objc final public func compareAndSet(expected: Swift.Bool, new: Swift.Bool) -> Swift.Bool
+  @objc final public func getValue() -> Swift.Bool
+  @objc final public func setValue(_ newValue: Swift.Bool)
   @objc deinit
 }
 @objc public protocol AlxMediaVideoDelegate : ObjectiveC.NSObjectProtocol {

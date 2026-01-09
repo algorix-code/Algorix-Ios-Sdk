@@ -326,6 +326,30 @@ SWIFT_CLASS("_TtC6AlxAds12AlxAdRequest")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC6AlxAds16AlxAtomicBoolean")
+@interface AlxAtomicBoolean : NSObject
+- (nonnull instancetype)initWithInitialValue:(BOOL)initialValue OBJC_DESIGNATED_INITIALIZER;
+/// 原子性获取当前值并设置新值（类似 Android 的 getAndSet）
+/// <ul>
+///   <li>
+///     参数 newValue: 要设置的新值
+///   </li>
+///   <li>
+///     返回: 旧值（设置前的原始值）
+///   </li>
+/// </ul>
+- (BOOL)getAndSet:(BOOL)newValue SWIFT_WARN_UNUSED_RESULT;
+/// 原子性比较并设置值 (类似 compareAndSet)
+- (BOOL)compareAndSetWithExpected:(BOOL)expected new:(BOOL)new_ SWIFT_WARN_UNUSED_RESULT;
+/// 原子性获取值
+- (BOOL)getValue SWIFT_WARN_UNUSED_RESULT;
+/// 原子性设置值
+- (void)setValue:(BOOL)newValue;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSCoder;
 @class NSString;
 @class UIWindow;
@@ -625,6 +649,13 @@ SWIFT_CLASS("_TtC6AlxAds6AlxSdk")
 + (void)setGDPRConsentMessage:(NSString * _Nonnull)value;
 + (void)setCOPPAConsent:(BOOL)value;
 + (void)setCCPA:(NSString * _Nonnull)value;
+@end
+
+
+SWIFT_CLASS("_TtC6AlxAds19AlxUserAgentService")
+@interface AlxUserAgentService : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -986,6 +1017,30 @@ SWIFT_CLASS("_TtC6AlxAds12AlxAdRequest")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC6AlxAds16AlxAtomicBoolean")
+@interface AlxAtomicBoolean : NSObject
+- (nonnull instancetype)initWithInitialValue:(BOOL)initialValue OBJC_DESIGNATED_INITIALIZER;
+/// 原子性获取当前值并设置新值（类似 Android 的 getAndSet）
+/// <ul>
+///   <li>
+///     参数 newValue: 要设置的新值
+///   </li>
+///   <li>
+///     返回: 旧值（设置前的原始值）
+///   </li>
+/// </ul>
+- (BOOL)getAndSet:(BOOL)newValue SWIFT_WARN_UNUSED_RESULT;
+/// 原子性比较并设置值 (类似 compareAndSet)
+- (BOOL)compareAndSetWithExpected:(BOOL)expected new:(BOOL)new_ SWIFT_WARN_UNUSED_RESULT;
+/// 原子性获取值
+- (BOOL)getValue SWIFT_WARN_UNUSED_RESULT;
+/// 原子性设置值
+- (void)setValue:(BOOL)newValue;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @class NSCoder;
 @class NSString;
 @class UIWindow;
@@ -1285,6 +1340,13 @@ SWIFT_CLASS("_TtC6AlxAds6AlxSdk")
 + (void)setGDPRConsentMessage:(NSString * _Nonnull)value;
 + (void)setCOPPAConsent:(BOOL)value;
 + (void)setCCPA:(NSString * _Nonnull)value;
+@end
+
+
+SWIFT_CLASS("_TtC6AlxAds19AlxUserAgentService")
+@interface AlxUserAgentService : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
